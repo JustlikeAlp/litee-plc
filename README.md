@@ -8,7 +8,7 @@
  
  LiTEE-PLC is an MPU-assisted security isolation framework for bare-metal Programmable Logic Controllers (PLCs). It partitions PLC firmware into trusted and untrusted domains using the built-in Memory Protection Unit (MPU), achieving efficient memory isolation with minimal software instrumentation and **no hardware modifications**.
  
- The source code is located in the [`TEE/litee-plc-firmware/`](TEE/litee-plc-firmware/) directory.
+ The source code is located in the `TEE/litee-plc-firmware/` directory.
  
  ---
  
@@ -102,8 +102,7 @@
  │       ├── lib/                  # Crypto, Ethernet, PWM libraries
  │       ├── platformio.ini        # Build configuration
  │       └── flash copy 2.ld       # Custom linker script
- ├── main.tex                      # Paper LaTeX source
- ├── README.md                     # This file
+  ├── README.md                     # This file
  └── .gitignore
  ```
  
