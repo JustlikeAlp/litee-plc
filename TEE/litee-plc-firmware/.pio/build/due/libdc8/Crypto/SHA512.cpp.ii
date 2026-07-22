@@ -1,0 +1,1212 @@
+# 1 "lib\\Crypto\\src\\SHA512.cpp"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "lib\\Crypto\\src\\SHA512.cpp"
+# 23 "lib\\Crypto\\src\\SHA512.cpp"
+# 1 "lib\\Crypto\\src\\SHA512.h" 1
+# 26 "lib\\Crypto\\src\\SHA512.h"
+# 1 "lib\\Crypto\\src\\Hash.h" 1
+# 26 "lib\\Crypto\\src\\Hash.h"
+# 1 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\inttypes.h" 1 3
+# 16 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\inttypes.h" 3
+# 1 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\newlib.h" 1 3
+# 14 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\newlib.h" 3
+# 1 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\_newlib_version.h" 1 3
+# 15 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\newlib.h" 2 3
+# 17 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\inttypes.h" 2 3
+# 1 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\config.h" 1 3
+
+
+
+# 1 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\machine\\ieeefp.h" 1 3
+# 5 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\config.h" 2 3
+# 1 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\features.h" 1 3
+# 25 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\features.h" 3
+
+# 25 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\features.h" 3
+extern "C" {
+# 515 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\features.h" 3
+}
+# 6 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\config.h" 2 3
+# 18 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\inttypes.h" 2 3
+# 1 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\_intsup.h" 1 3
+# 35 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\_intsup.h" 3
+       
+       
+       
+       
+       
+       
+       
+# 187 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\_intsup.h" 3
+       
+       
+       
+       
+       
+       
+       
+# 19 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\inttypes.h" 2 3
+# 1 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\_ansi.h" 1 3
+# 20 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\inttypes.h" 2 3
+# 1 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\lib\\gcc\\arm-none-eabi\\7.2.1\\include\\stdint.h" 1 3 4
+# 9 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\lib\\gcc\\arm-none-eabi\\7.2.1\\include\\stdint.h" 3 4
+# 1 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\stdint.h" 1 3 4
+# 12 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\stdint.h" 3 4
+# 1 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\machine\\_default_types.h" 1 3 4
+# 37 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\machine\\_default_types.h" 3 4
+extern "C" {
+
+
+
+typedef signed char __int8_t;
+
+typedef unsigned char __uint8_t;
+# 55 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\machine\\_default_types.h" 3 4
+typedef short int __int16_t;
+
+typedef short unsigned int __uint16_t;
+# 77 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\machine\\_default_types.h" 3 4
+typedef long int __int32_t;
+
+typedef long unsigned int __uint32_t;
+# 103 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\machine\\_default_types.h" 3 4
+typedef long long int __int64_t;
+
+typedef long long unsigned int __uint64_t;
+# 134 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\machine\\_default_types.h" 3 4
+typedef signed char __int_least8_t;
+
+typedef unsigned char __uint_least8_t;
+# 160 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\machine\\_default_types.h" 3 4
+typedef short int __int_least16_t;
+
+typedef short unsigned int __uint_least16_t;
+# 182 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\machine\\_default_types.h" 3 4
+typedef long int __int_least32_t;
+
+typedef long unsigned int __uint_least32_t;
+# 200 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\machine\\_default_types.h" 3 4
+typedef long long int __int_least64_t;
+
+typedef long long unsigned int __uint_least64_t;
+# 214 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\machine\\_default_types.h" 3 4
+typedef long long int __intmax_t;
+
+
+
+
+
+
+
+typedef long long unsigned int __uintmax_t;
+
+
+
+
+
+
+
+typedef int __intptr_t;
+
+typedef unsigned int __uintptr_t;
+# 247 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\machine\\_default_types.h" 3 4
+}
+# 13 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\stdint.h" 2 3 4
+
+# 1 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\_stdint.h" 1 3 4
+# 15 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\_stdint.h" 3 4
+extern "C" {
+
+
+
+
+typedef __int8_t int8_t ;
+
+
+
+typedef __uint8_t uint8_t ;
+
+
+
+
+
+
+
+typedef __int16_t int16_t ;
+
+
+
+typedef __uint16_t uint16_t ;
+
+
+
+
+
+
+
+typedef __int32_t int32_t ;
+
+
+
+typedef __uint32_t uint32_t ;
+
+
+
+
+
+
+
+typedef __int64_t int64_t ;
+
+
+
+typedef __uint64_t uint64_t ;
+
+
+
+
+
+
+typedef __intmax_t intmax_t;
+
+
+
+
+typedef __uintmax_t uintmax_t;
+
+
+
+
+typedef __intptr_t intptr_t;
+
+
+
+
+typedef __uintptr_t uintptr_t;
+
+
+
+
+}
+# 15 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\stdint.h" 2 3 4
+
+
+extern "C" {
+
+
+
+typedef __int_least8_t int_least8_t;
+typedef __uint_least8_t uint_least8_t;
+
+
+
+
+typedef __int_least16_t int_least16_t;
+typedef __uint_least16_t uint_least16_t;
+
+
+
+
+typedef __int_least32_t int_least32_t;
+typedef __uint_least32_t uint_least32_t;
+
+
+
+
+typedef __int_least64_t int_least64_t;
+typedef __uint_least64_t uint_least64_t;
+# 51 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\stdint.h" 3 4
+  typedef int int_fast8_t;
+  typedef unsigned int uint_fast8_t;
+# 61 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\stdint.h" 3 4
+  typedef int int_fast16_t;
+  typedef unsigned int uint_fast16_t;
+# 71 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\stdint.h" 3 4
+  typedef int int_fast32_t;
+  typedef unsigned int uint_fast32_t;
+# 81 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\stdint.h" 3 4
+  typedef long long int int_fast64_t;
+  typedef long long unsigned int uint_fast64_t;
+# 463 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\stdint.h" 3 4
+}
+# 10 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\lib\\gcc\\arm-none-eabi\\7.2.1\\include\\stdint.h" 2 3 4
+# 21 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\inttypes.h" 2 3
+
+# 1 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\lib\\gcc\\arm-none-eabi\\7.2.1\\include\\stddef.h" 1 3 4
+# 23 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\inttypes.h" 2 3
+
+
+# 1 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\xlocale.h" 1 3
+# 9 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\xlocale.h" 3
+struct __locale_t;
+typedef struct __locale_t *locale_t;
+# 26 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\inttypes.h" 2 3
+# 312 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\inttypes.h" 3
+typedef struct {
+  intmax_t quot;
+  intmax_t rem;
+} imaxdiv_t;
+
+struct _reent;
+
+
+extern "C" {
+
+
+extern intmax_t imaxabs(intmax_t j);
+extern imaxdiv_t imaxdiv(intmax_t numer, intmax_t denomer);
+extern intmax_t strtoimax(const char *__restrict, char **__restrict, int);
+extern intmax_t _strtoimax_r(struct _reent *, const char *__restrict, char **__restrict, int);
+extern uintmax_t strtoumax(const char *__restrict, char **__restrict, int);
+extern uintmax_t _strtoumax_r(struct _reent *, const char *__restrict, char **__restrict, int);
+extern intmax_t wcstoimax(const wchar_t *__restrict, wchar_t **__restrict, int);
+extern intmax_t _wcstoimax_r(struct _reent *, const wchar_t *__restrict, wchar_t **__restrict, int);
+extern uintmax_t wcstoumax(const wchar_t *__restrict, wchar_t **__restrict, int);
+extern uintmax_t _wcstoumax_r(struct _reent *, const wchar_t *__restrict, wchar_t **__restrict, int);
+
+
+extern intmax_t strtoimax_l(const char *__restrict, char **_restrict, int, locale_t);
+extern uintmax_t strtoumax_l(const char *__restrict, char **_restrict, int, locale_t);
+extern intmax_t wcstoimax_l(const wchar_t *__restrict, wchar_t **_restrict, int, locale_t);
+extern uintmax_t wcstoumax_l(const wchar_t *__restrict, wchar_t **_restrict, int, locale_t);
+
+
+
+}
+# 27 "lib\\Crypto\\src\\Hash.h" 2
+# 1 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\lib\\gcc\\arm-none-eabi\\7.2.1\\include\\stddef.h" 1 3 4
+# 149 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\lib\\gcc\\arm-none-eabi\\7.2.1\\include\\stddef.h" 3 4
+typedef int ptrdiff_t;
+# 216 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\lib\\gcc\\arm-none-eabi\\7.2.1\\include\\stddef.h" 3 4
+typedef unsigned int size_t;
+# 426 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\lib\\gcc\\arm-none-eabi\\7.2.1\\include\\stddef.h" 3 4
+typedef struct {
+  long long __max_align_ll __attribute__((__aligned__(__alignof__(long long))));
+  long double __max_align_ld __attribute__((__aligned__(__alignof__(long double))));
+# 437 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\lib\\gcc\\arm-none-eabi\\7.2.1\\include\\stddef.h" 3 4
+} max_align_t;
+
+
+
+
+
+
+  typedef decltype(nullptr) nullptr_t;
+# 28 "lib\\Crypto\\src\\Hash.h" 2
+
+
+# 29 "lib\\Crypto\\src\\Hash.h"
+class Hash
+{
+public:
+    Hash();
+    virtual ~Hash();
+
+    virtual size_t hashSize() const = 0;
+    virtual size_t blockSize() const = 0;
+
+    virtual void reset() = 0;
+    virtual void update(const void *data, size_t len) = 0;
+    virtual void finalize(void *hash, size_t len) = 0;
+
+    virtual void clear() = 0;
+
+    virtual void resetHMAC(const void *key, size_t keyLen) = 0;
+    virtual void finalizeHMAC(const void *key, size_t keyLen, void *hash, size_t hashLen) = 0;
+
+protected:
+    void formatHMACKey(void *block, const void *key, size_t len, uint8_t pad);
+};
+
+template <typename T> void hmac
+    (void *out, size_t outLen, const void *key, size_t keyLen,
+     const void *data, size_t dataLen)
+{
+    T context;
+    context.resetHMAC(key, keyLen);
+    context.update(data, dataLen);
+    context.finalizeHMAC(key, keyLen, out, outLen);
+}
+# 27 "lib\\Crypto\\src\\SHA512.h" 2
+
+class Ed25519;
+
+class SHA512 : public Hash
+{
+public:
+    SHA512();
+    virtual ~SHA512();
+
+    size_t hashSize() const;
+    size_t blockSize() const;
+
+    void reset();
+    void update(const void *data, size_t len);
+    void finalize(void *hash, size_t len);
+
+    void clear();
+
+    void resetHMAC(const void *key, size_t keyLen);
+    void finalizeHMAC(const void *key, size_t keyLen, void *hash, size_t hashLen);
+
+    static const size_t HASH_SIZE = 64;
+    static const size_t BLOCK_SIZE = 128;
+
+protected:
+    struct {
+        uint64_t h[8];
+        uint64_t w[16];
+        uint64_t lengthLow;
+        uint64_t lengthHigh;
+        uint8_t chunkSize;
+    } state;
+
+    void processChunk();
+
+    friend class Ed25519;
+};
+# 24 "lib\\Crypto\\src\\SHA512.cpp" 2
+# 1 "lib\\Crypto\\src\\Crypto.h" 1
+# 27 "lib\\Crypto\\src\\Crypto.h"
+# 1 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\lib\\gcc\\arm-none-eabi\\7.2.1\\include\\stddef.h" 1 3 4
+# 28 "lib\\Crypto\\src\\Crypto.h" 2
+
+void clean(void *dest, size_t size);
+
+template <typename T>
+inline void clean(T &var)
+{
+    clean(&var, sizeof(T));
+}
+
+bool secure_compare(const void *data1, const void *data2, size_t len);
+# 25 "lib\\Crypto\\src\\SHA512.cpp" 2
+# 1 "lib\\Crypto\\src\\utility/RotateUtil.h" 1
+# 26 "lib\\Crypto\\src\\SHA512.cpp" 2
+# 1 "lib\\Crypto\\src\\utility/EndianUtil.h" 1
+# 27 "lib\\Crypto\\src\\SHA512.cpp" 2
+# 1 "lib\\Crypto\\src\\utility/ProgMemUtil.h" 1
+# 43 "lib\\Crypto\\src\\utility/ProgMemUtil.h"
+# 1 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\string.h" 1 3
+# 11 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\string.h" 3
+# 1 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\reent.h" 1 3
+# 9 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\reent.h" 3
+
+# 9 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\reent.h" 3
+extern "C" {
+
+
+
+# 1 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\_ansi.h" 1 3
+# 14 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\reent.h" 2 3
+# 1 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\lib\\gcc\\arm-none-eabi\\7.2.1\\include\\stddef.h" 1 3 4
+# 15 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\reent.h" 2 3
+# 1 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\_types.h" 1 3
+# 24 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\_types.h" 3
+# 1 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\machine\\_types.h" 1 3
+# 25 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\_types.h" 2 3
+# 1 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\lock.h" 1 3
+# 30 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\lock.h" 3
+extern "C" {
+
+
+struct __lock;
+typedef struct __lock * _LOCK_T;
+
+
+
+
+
+
+extern void __retarget_lock_init(_LOCK_T *lock);
+
+extern void __retarget_lock_init_recursive(_LOCK_T *lock);
+
+extern void __retarget_lock_close(_LOCK_T lock);
+
+extern void __retarget_lock_close_recursive(_LOCK_T lock);
+
+extern void __retarget_lock_acquire(_LOCK_T lock);
+
+extern void __retarget_lock_acquire_recursive(_LOCK_T lock);
+
+extern int __retarget_lock_try_acquire(_LOCK_T lock);
+
+extern int __retarget_lock_try_acquire_recursive(_LOCK_T lock);
+
+
+extern void __retarget_lock_release(_LOCK_T lock);
+
+extern void __retarget_lock_release_recursive(_LOCK_T lock);
+
+
+
+}
+# 26 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\_types.h" 2 3
+
+
+typedef long __blkcnt_t;
+
+
+
+typedef long __blksize_t;
+
+
+
+typedef __uint64_t __fsblkcnt_t;
+
+
+
+typedef __uint32_t __fsfilcnt_t;
+
+
+
+typedef long _off_t;
+
+
+
+
+
+typedef int __pid_t;
+
+
+
+typedef short __dev_t;
+
+
+
+typedef unsigned short __uid_t;
+
+
+typedef unsigned short __gid_t;
+
+
+
+typedef __uint32_t __id_t;
+
+
+
+
+
+
+
+typedef unsigned short __ino_t;
+# 88 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\_types.h" 3
+typedef __uint32_t __mode_t;
+
+
+
+
+
+__extension__ typedef long long _off64_t;
+
+
+
+
+
+typedef _off_t __off_t;
+
+
+typedef _off64_t __loff_t;
+
+
+typedef long __key_t;
+
+
+
+
+
+
+
+typedef long _fpos_t;
+# 129 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\_types.h" 3
+typedef unsigned int __size_t;
+# 145 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\_types.h" 3
+typedef signed int _ssize_t;
+# 156 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\_types.h" 3
+typedef _ssize_t __ssize_t;
+
+
+# 1 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\lib\\gcc\\arm-none-eabi\\7.2.1\\include\\stddef.h" 1 3 4
+# 357 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\lib\\gcc\\arm-none-eabi\\7.2.1\\include\\stddef.h" 3 4
+typedef unsigned int wint_t;
+# 160 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\_types.h" 2 3
+
+
+
+typedef struct
+{
+  int __count;
+  union
+  {
+    wint_t __wch;
+    unsigned char __wchb[4];
+  } __value;
+} _mbstate_t;
+
+
+
+typedef _LOCK_T _flock_t;
+
+
+
+
+typedef void *_iconv_t;
+
+
+
+
+
+
+typedef unsigned long __clock_t;
+
+
+
+
+
+
+typedef __int_least64_t __time_t;
+
+
+typedef unsigned long __clockid_t;
+
+
+typedef unsigned long __timer_t;
+
+
+typedef __uint8_t __sa_family_t;
+
+
+
+typedef __uint32_t __socklen_t;
+
+
+typedef unsigned short __nlink_t;
+typedef long __suseconds_t;
+typedef unsigned long __useconds_t;
+
+
+
+
+typedef char * __va_list;
+# 16 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\reent.h" 2 3
+
+
+
+
+
+
+typedef unsigned long __ULong;
+# 38 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\reent.h" 3
+struct _reent;
+
+struct __locale_t;
+
+
+
+
+
+
+struct _Bigint
+{
+  struct _Bigint *_next;
+  int _k, _maxwds, _sign, _wds;
+  __ULong _x[1];
+};
+
+
+struct __tm
+{
+  int __tm_sec;
+  int __tm_min;
+  int __tm_hour;
+  int __tm_mday;
+  int __tm_mon;
+  int __tm_year;
+  int __tm_wday;
+  int __tm_yday;
+  int __tm_isdst;
+};
+
+
+
+
+
+
+
+struct _on_exit_args {
+ void * _fnargs[32];
+ void * _dso_handle[32];
+
+ __ULong _fntypes;
+
+
+ __ULong _is_cxa;
+};
+# 93 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\reent.h" 3
+struct _atexit {
+ struct _atexit *_next;
+ int _ind;
+
+ void (*_fns[32])(void);
+        struct _on_exit_args _on_exit_args;
+};
+# 117 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\reent.h" 3
+struct __sbuf {
+ unsigned char *_base;
+ int _size;
+};
+# 181 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\reent.h" 3
+struct __sFILE {
+  unsigned char *_p;
+  int _r;
+  int _w;
+  short _flags;
+  short _file;
+  struct __sbuf _bf;
+  int _lbfsize;
+
+
+
+
+
+
+  void * _cookie;
+
+  int (* _read) (struct _reent *, void *, char *, int)
+                                          ;
+  int (* _write) (struct _reent *, void *, const char *, int)
+
+                                   ;
+  _fpos_t (* _seek) (struct _reent *, void *, _fpos_t, int);
+  int (* _close) (struct _reent *, void *);
+
+
+  struct __sbuf _ub;
+  unsigned char *_up;
+  int _ur;
+
+
+  unsigned char _ubuf[3];
+  unsigned char _nbuf[1];
+
+
+  struct __sbuf _lb;
+
+
+  int _blksize;
+  _off_t _offset;
+
+
+  struct _reent *_data;
+
+
+
+  _flock_t _lock;
+
+  _mbstate_t _mbstate;
+  int _flags2;
+};
+# 287 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\reent.h" 3
+typedef struct __sFILE __FILE;
+
+
+
+struct _glue
+{
+  struct _glue *_next;
+  int _niobs;
+  __FILE *_iobs;
+};
+# 319 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\reent.h" 3
+struct _rand48 {
+  unsigned short _seed[3];
+  unsigned short _mult[3];
+  unsigned short _add;
+
+
+
+
+};
+# 569 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\reent.h" 3
+struct _reent
+{
+  int _errno;
+
+
+
+
+  __FILE *_stdin, *_stdout, *_stderr;
+
+  int _inc;
+  char _emergency[25];
+
+
+  int _unspecified_locale_info;
+  struct __locale_t *_locale;
+
+  int __sdidinit;
+
+  void (* __cleanup) (struct _reent *);
+
+
+  struct _Bigint *_result;
+  int _result_k;
+  struct _Bigint *_p5s;
+  struct _Bigint **_freelist;
+
+
+  int _cvtlen;
+  char *_cvtbuf;
+
+  union
+    {
+      struct
+        {
+          unsigned int _unused_rand;
+          char * _strtok_last;
+          char _asctime_buf[26];
+          struct __tm _localtime_buf;
+          int _gamma_signgam;
+          __extension__ unsigned long long _rand_next;
+          struct _rand48 _r48;
+          _mbstate_t _mblen_state;
+          _mbstate_t _mbtowc_state;
+          _mbstate_t _wctomb_state;
+          char _l64a_buf[8];
+          char _signal_buf[24];
+          int _getdate_err;
+          _mbstate_t _mbrlen_state;
+          _mbstate_t _mbrtowc_state;
+          _mbstate_t _mbsrtowcs_state;
+          _mbstate_t _wcrtomb_state;
+          _mbstate_t _wcsrtombs_state;
+   int _h_errno;
+        } _reent;
+
+
+
+      struct
+        {
+
+          unsigned char * _nextf[30];
+          unsigned int _nmalloc[30];
+        } _unused;
+    } _new;
+
+
+
+  struct _atexit *_atexit;
+  struct _atexit _atexit0;
+
+
+
+  void (**(_sig_func))(int);
+
+
+
+
+  struct _glue __sglue;
+
+  __FILE __sf[3];
+
+};
+# 775 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\reent.h" 3
+extern struct _reent *_impure_ptr ;
+extern struct _reent *const _global_impure_ptr ;
+
+void _reclaim_reent (struct _reent *);
+# 801 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\reent.h" 3
+}
+# 12 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\string.h" 2 3
+# 1 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\cdefs.h" 1 3
+# 45 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\cdefs.h" 3
+# 1 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\lib\\gcc\\arm-none-eabi\\7.2.1\\include\\stddef.h" 1 3 4
+# 46 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\cdefs.h" 2 3
+# 13 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\string.h" 2 3
+
+
+
+
+# 1 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\lib\\gcc\\arm-none-eabi\\7.2.1\\include\\stddef.h" 1 3 4
+# 18 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\string.h" 2 3
+
+
+
+
+
+
+# 1 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\strings.h" 1 3
+# 44 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\strings.h" 3
+extern "C" {
+
+int bcmp(const void *, const void *, size_t) __attribute__((__pure__));
+void bcopy(const void *, void *, size_t);
+void bzero(void *, size_t);
+
+
+void explicit_bzero(void *, size_t);
+
+
+int ffs(int) __attribute__((__const__));
+
+
+int ffsl(long) __attribute__((__const__));
+int ffsll(long long) __attribute__((__const__));
+int fls(int) __attribute__((__const__));
+int flsl(long) __attribute__((__const__));
+int flsll(long long) __attribute__((__const__));
+
+
+char *index(const char *, int) __attribute__((__pure__));
+char *rindex(const char *, int) __attribute__((__pure__));
+
+int strcasecmp(const char *, const char *) __attribute__((__pure__));
+int strncasecmp(const char *, const char *, size_t) __attribute__((__pure__));
+
+
+int strcasecmp_l (const char *, const char *, locale_t);
+int strncasecmp_l (const char *, const char *, size_t, locale_t);
+
+}
+# 25 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\string.h" 2 3
+
+
+extern "C" {
+
+void * memchr (const void *, int, size_t);
+int memcmp (const void *, const void *, size_t);
+void * memcpy (void * , const void * , size_t);
+void * memmove (void *, const void *, size_t);
+void * memset (void *, int, size_t);
+char *strcat (char *, const char *);
+char *strchr (const char *, int);
+int strcmp (const char *, const char *);
+int strcoll (const char *, const char *);
+char *strcpy (char *, const char *);
+size_t strcspn (const char *, const char *);
+char *strerror (int);
+size_t strlen (const char *);
+char *strncat (char *, const char *, size_t);
+int strncmp (const char *, const char *, size_t);
+char *strncpy (char *, const char *, size_t);
+char *strpbrk (const char *, const char *);
+char *strrchr (const char *, int);
+size_t strspn (const char *, const char *);
+char *strstr (const char *, const char *);
+
+char *strtok (char *, const char *);
+
+size_t strxfrm (char *, const char *, size_t);
+
+
+int strcoll_l (const char *, const char *, locale_t);
+char *strerror_l (int, locale_t);
+size_t strxfrm_l (char *, const char *, size_t, locale_t);
+
+
+char *strtok_r (char *, const char *, char **);
+
+
+int timingsafe_bcmp (const void *, const void *, size_t);
+int timingsafe_memcmp (const void *, const void *, size_t);
+
+
+void * memccpy (void * , const void * , int, size_t);
+# 76 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\string.h" 3
+char *stpcpy (char *, const char *);
+char *stpncpy (char *, const char *, size_t);
+
+
+
+
+
+
+char *strdup (const char *);
+
+char *_strdup_r (struct _reent *, const char *);
+
+char *strndup (const char *, size_t);
+
+char *_strndup_r (struct _reent *, const char *, size_t);
+# 100 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\string.h" 3
+int strerror_r (int, char *, size_t)
+
+             __asm__ ("" "__xpg_strerror_r")
+
+  ;
+
+
+
+
+
+
+
+char * _strerror_r (struct _reent *, int, int, int *);
+
+
+size_t strlcat (char *, const char *, size_t);
+size_t strlcpy (char *, const char *, size_t);
+
+
+size_t strnlen (const char *, size_t);
+
+
+char *strsep (char **, const char *);
+
+
+char *strnstr(const char *, const char *, size_t) __attribute__((__pure__));
+
+
+
+char *strlwr (char *);
+char *strupr (char *);
+
+
+
+char *strsignal (int __signo);
+# 175 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\string.h" 3
+# 1 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\sys\\string.h" 1 3
+# 176 "c:\\users\\huawei\\.platformio\\packages\\toolchain-gccarmnoneeabi\\arm-none-eabi\\include\\string.h" 2 3
+
+}
+# 44 "lib\\Crypto\\src\\utility/ProgMemUtil.h" 2
+# 28 "lib\\Crypto\\src\\SHA512.cpp" 2
+# 52 "lib\\Crypto\\src\\SHA512.cpp"
+
+# 52 "lib\\Crypto\\src\\SHA512.cpp"
+SHA512::SHA512()
+{
+    reset();
+}
+
+
+
+
+
+SHA512::~SHA512()
+{
+    clean(state);
+}
+
+size_t SHA512::hashSize() const
+{
+    return 64;
+}
+
+size_t SHA512::blockSize() const
+{
+    return 128;
+}
+
+void SHA512::reset()
+{
+    static uint64_t const hashStart[8] = {
+        0x6A09E667F3BCC908ULL, 0xBB67AE8584CAA73BULL, 0x3C6EF372FE94F82BULL,
+        0xA54FF53A5F1D36F1ULL, 0x510E527FADE682D1ULL, 0x9B05688C2B3E6C1FULL,
+        0x1F83D9ABFB41BD6BULL, 0x5BE0CD19137E2179ULL
+    };
+    memcpy((state.h), (hashStart), (sizeof(hashStart)));
+    state.chunkSize = 0;
+    state.lengthLow = 0;
+    state.lengthHigh = 0;
+}
+
+void SHA512::update(const void *data, size_t len)
+{
+
+    uint64_t temp = state.lengthLow;
+    state.lengthLow += (((uint64_t)len) << 3);
+    state.lengthHigh += (((uint64_t)len) >> 61);
+    if (state.lengthLow < temp)
+        ++state.lengthHigh;
+
+
+    const uint8_t *d = (const uint8_t *)data;
+    while (len > 0) {
+        uint8_t size = 128 - state.chunkSize;
+        if (size > len)
+            size = len;
+        memcpy(((uint8_t *)state.w) + state.chunkSize, d, size);
+        state.chunkSize += size;
+        len -= size;
+        d += size;
+        if (state.chunkSize == 128) {
+            processChunk();
+            state.chunkSize = 0;
+        }
+    }
+}
+
+void SHA512::finalize(void *hash, size_t len)
+{
+
+
+    uint8_t *wbytes = (uint8_t *)state.w;
+    if (state.chunkSize <= (128 - 17)) {
+        wbytes[state.chunkSize] = 0x80;
+        memset(wbytes + state.chunkSize + 1, 0x00, 128 - 16 - (state.chunkSize + 1));
+        state.w[14] = (__extension__ ({ uint64_t __temp = (state.lengthHigh); uint32_t __low = (__extension__ ({ uint32_t _temp = ((uint32_t)__temp); ((_temp >> 24) & 0x000000FF) | ((_temp >> 8) & 0x0000FF00) | ((_temp << 8) & 0x00FF0000) | ((_temp << 24) & 0xFF000000); })); uint32_t __high = (__extension__ ({ uint32_t _temp = ((uint32_t)(__temp >> 32)); ((_temp >> 24) & 0x000000FF) | ((_temp >> 8) & 0x0000FF00) | ((_temp << 8) & 0x00FF0000) | ((_temp << 24) & 0xFF000000); })); (((uint64_t)__low) << 32) | __high; }));
+        state.w[15] = (__extension__ ({ uint64_t __temp = (state.lengthLow); uint32_t __low = (__extension__ ({ uint32_t _temp = ((uint32_t)__temp); ((_temp >> 24) & 0x000000FF) | ((_temp >> 8) & 0x0000FF00) | ((_temp << 8) & 0x00FF0000) | ((_temp << 24) & 0xFF000000); })); uint32_t __high = (__extension__ ({ uint32_t _temp = ((uint32_t)(__temp >> 32)); ((_temp >> 24) & 0x000000FF) | ((_temp >> 8) & 0x0000FF00) | ((_temp << 8) & 0x00FF0000) | ((_temp << 24) & 0xFF000000); })); (((uint64_t)__low) << 32) | __high; }));
+        processChunk();
+    } else {
+        wbytes[state.chunkSize] = 0x80;
+        memset(wbytes + state.chunkSize + 1, 0x00, 128 - (state.chunkSize + 1));
+        processChunk();
+        memset(wbytes, 0x00, 128 - 16);
+        state.w[14] = (__extension__ ({ uint64_t __temp = (state.lengthHigh); uint32_t __low = (__extension__ ({ uint32_t _temp = ((uint32_t)__temp); ((_temp >> 24) & 0x000000FF) | ((_temp >> 8) & 0x0000FF00) | ((_temp << 8) & 0x00FF0000) | ((_temp << 24) & 0xFF000000); })); uint32_t __high = (__extension__ ({ uint32_t _temp = ((uint32_t)(__temp >> 32)); ((_temp >> 24) & 0x000000FF) | ((_temp >> 8) & 0x0000FF00) | ((_temp << 8) & 0x00FF0000) | ((_temp << 24) & 0xFF000000); })); (((uint64_t)__low) << 32) | __high; }));
+        state.w[15] = (__extension__ ({ uint64_t __temp = (state.lengthLow); uint32_t __low = (__extension__ ({ uint32_t _temp = ((uint32_t)__temp); ((_temp >> 24) & 0x000000FF) | ((_temp >> 8) & 0x0000FF00) | ((_temp << 8) & 0x00FF0000) | ((_temp << 24) & 0xFF000000); })); uint32_t __high = (__extension__ ({ uint32_t _temp = ((uint32_t)(__temp >> 32)); ((_temp >> 24) & 0x000000FF) | ((_temp >> 8) & 0x0000FF00) | ((_temp << 8) & 0x00FF0000) | ((_temp << 24) & 0xFF000000); })); (((uint64_t)__low) << 32) | __high; }));
+        processChunk();
+    }
+
+
+    for (uint8_t posn = 0; posn < 8; ++posn)
+        state.w[posn] = (__extension__ ({ uint64_t __temp = (state.h[posn]); uint32_t __low = (__extension__ ({ uint32_t _temp = ((uint32_t)__temp); ((_temp >> 24) & 0x000000FF) | ((_temp >> 8) & 0x0000FF00) | ((_temp << 8) & 0x00FF0000) | ((_temp << 24) & 0xFF000000); })); uint32_t __high = (__extension__ ({ uint32_t _temp = ((uint32_t)(__temp >> 32)); ((_temp >> 24) & 0x000000FF) | ((_temp >> 8) & 0x0000FF00) | ((_temp << 8) & 0x00FF0000) | ((_temp << 24) & 0xFF000000); })); (((uint64_t)__low) << 32) | __high; }));
+
+
+    size_t maxHashSize = hashSize();
+    if (len > maxHashSize)
+        len = maxHashSize;
+    memcpy(hash, state.w, len);
+}
+
+void SHA512::clear()
+{
+    clean(state);
+    reset();
+}
+
+void SHA512::resetHMAC(const void *key, size_t keyLen)
+{
+    formatHMACKey(state.w, key, keyLen, 0x36);
+    state.lengthLow += 128 * 8;
+    processChunk();
+}
+
+void SHA512::finalizeHMAC(const void *key, size_t keyLen, void *hash, size_t hashLen)
+{
+    uint8_t temp[64];
+    finalize(temp, sizeof(temp));
+    formatHMACKey(state.w, key, keyLen, 0x5C);
+    state.lengthLow += 128 * 8;
+    processChunk();
+    update(temp, hashSize());
+    finalize(hash, hashLen);
+    clean(temp);
+}
+
+
+
+
+
+
+void SHA512::processChunk()
+{
+
+    static uint64_t const k[80] = {
+        0x428A2F98D728AE22ULL, 0x7137449123EF65CDULL, 0xB5C0FBCFEC4D3B2FULL,
+        0xE9B5DBA58189DBBCULL, 0x3956C25BF348B538ULL, 0x59F111F1B605D019ULL,
+        0x923F82A4AF194F9BULL, 0xAB1C5ED5DA6D8118ULL, 0xD807AA98A3030242ULL,
+        0x12835B0145706FBEULL, 0x243185BE4EE4B28CULL, 0x550C7DC3D5FFB4E2ULL,
+        0x72BE5D74F27B896FULL, 0x80DEB1FE3B1696B1ULL, 0x9BDC06A725C71235ULL,
+        0xC19BF174CF692694ULL, 0xE49B69C19EF14AD2ULL, 0xEFBE4786384F25E3ULL,
+        0x0FC19DC68B8CD5B5ULL, 0x240CA1CC77AC9C65ULL, 0x2DE92C6F592B0275ULL,
+        0x4A7484AA6EA6E483ULL, 0x5CB0A9DCBD41FBD4ULL, 0x76F988DA831153B5ULL,
+        0x983E5152EE66DFABULL, 0xA831C66D2DB43210ULL, 0xB00327C898FB213FULL,
+        0xBF597FC7BEEF0EE4ULL, 0xC6E00BF33DA88FC2ULL, 0xD5A79147930AA725ULL,
+        0x06CA6351E003826FULL, 0x142929670A0E6E70ULL, 0x27B70A8546D22FFCULL,
+        0x2E1B21385C26C926ULL, 0x4D2C6DFC5AC42AEDULL, 0x53380D139D95B3DFULL,
+        0x650A73548BAF63DEULL, 0x766A0ABB3C77B2A8ULL, 0x81C2C92E47EDAEE6ULL,
+        0x92722C851482353BULL, 0xA2BFE8A14CF10364ULL, 0xA81A664BBC423001ULL,
+        0xC24B8B70D0F89791ULL, 0xC76C51A30654BE30ULL, 0xD192E819D6EF5218ULL,
+        0xD69906245565A910ULL, 0xF40E35855771202AULL, 0x106AA07032BBD1B8ULL,
+        0x19A4C116B8D2D0C8ULL, 0x1E376C085141AB53ULL, 0x2748774CDF8EEB99ULL,
+        0x34B0BCB5E19B48A8ULL, 0x391C0CB3C5C95A63ULL, 0x4ED8AA4AE3418ACBULL,
+        0x5B9CCA4F7763E373ULL, 0x682E6FF3D6B2B8A3ULL, 0x748F82EE5DEFB2FCULL,
+        0x78A5636F43172F60ULL, 0x84C87814A1F0AB72ULL, 0x8CC702081A6439ECULL,
+        0x90BEFFFA23631E28ULL, 0xA4506CEBDE82BDE9ULL, 0xBEF9A3F7B2C67915ULL,
+        0xC67178F2E372532BULL, 0xCA273ECEEA26619CULL, 0xD186B8C721C0C207ULL,
+        0xEADA7DD6CDE0EB1EULL, 0xF57D4F7FEE6ED178ULL, 0x06F067AA72176FBAULL,
+        0x0A637DC5A2C898A6ULL, 0x113F9804BEF90DAEULL, 0x1B710B35131C471BULL,
+        0x28DB77F523047D84ULL, 0x32CAAB7B40C72493ULL, 0x3C9EBE0A15C9BEBCULL,
+        0x431D67C49C100D4CULL, 0x4CC5D4BECB3E42B6ULL, 0x597F299CFC657E2AULL,
+        0x5FCB6FAB3AD6FAECULL, 0x6C44198C4A475817ULL
+    };
+
+
+    uint8_t index;
+    for (index = 0; index < 16; ++index)
+        state.w[index] = ((__extension__ ({ uint64_t __temp = ((state.w[index])); uint32_t __low = (__extension__ ({ uint32_t _temp = ((uint32_t)__temp); ((_temp >> 24) & 0x000000FF) | ((_temp >> 8) & 0x0000FF00) | ((_temp << 8) & 0x00FF0000) | ((_temp << 24) & 0xFF000000); })); uint32_t __high = (__extension__ ({ uint32_t _temp = ((uint32_t)(__temp >> 32)); ((_temp >> 24) & 0x000000FF) | ((_temp >> 8) & 0x0000FF00) | ((_temp << 8) & 0x00FF0000) | ((_temp << 24) & 0xFF000000); })); (((uint64_t)__low) << 32) | __high; })));
+
+
+    uint64_t a = state.h[0];
+    uint64_t b = state.h[1];
+    uint64_t c = state.h[2];
+    uint64_t d = state.h[3];
+    uint64_t e = state.h[4];
+    uint64_t f = state.h[5];
+    uint64_t g = state.h[6];
+    uint64_t h = state.h[7];
+
+
+    uint64_t temp1, temp2;
+    for (index = 0; index < 16; ++index) {
+        temp1 = h + (*(k + index)) + state.w[index] +
+                (((__extension__ ({ uint64_t _temp = ((e)); (_temp >> (14)) | (_temp << (64 - (14))); }))) ^ ((__extension__ ({ uint64_t _temp = ((e)); (_temp >> (18)) | (_temp << (64 - (18))); }))) ^
+                 ((__extension__ ({ uint64_t _temp = ((e)); (_temp >> (41)) | (_temp << (64 - (41))); })))) + ((e & f) ^ ((~e) & g));
+        temp2 = (((__extension__ ({ uint64_t _temp = ((a)); (_temp >> (28)) | (_temp << (64 - (28))); }))) ^ ((__extension__ ({ uint64_t _temp = ((a)); (_temp >> (34)) | (_temp << (64 - (34))); }))) ^
+                 ((__extension__ ({ uint64_t _temp = ((a)); (_temp >> (39)) | (_temp << (64 - (39))); })))) + ((a & b) ^ (a & c) ^ (b & c));
+        h = g;
+        g = f;
+        f = e;
+        e = d + temp1;
+        d = c;
+        c = b;
+        b = a;
+        a = temp1 + temp2;
+    }
+
+
+
+
+    for (; index < 80; ++index) {
+
+        temp1 = state.w[(index - 15) & 0x0F];
+        temp2 = state.w[(index - 2) & 0x0F];
+        temp1 = state.w[index & 0x0F] =
+            state.w[(index - 16) & 0x0F] + state.w[(index - 7) & 0x0F] +
+                (((__extension__ ({ uint64_t _temp = ((temp1)); (_temp >> (1)) | (_temp << (64 - (1))); }))) ^ ((__extension__ ({ uint64_t _temp = ((temp1)); (_temp >> (8)) | (_temp << (64 - (8))); }))) ^
+                 (temp1 >> 7)) +
+                (((__extension__ ({ uint64_t _temp = ((temp2)); (_temp >> (19)) | (_temp << (64 - (19))); }))) ^ ((__extension__ ({ uint64_t _temp = ((temp2)); (_temp >> (61)) | (_temp << (64 - (61))); }))) ^
+                 (temp2 >> 6));
+
+
+        temp1 = h + (*(k + index)) + temp1 +
+                (((__extension__ ({ uint64_t _temp = ((e)); (_temp >> (14)) | (_temp << (64 - (14))); }))) ^ ((__extension__ ({ uint64_t _temp = ((e)); (_temp >> (18)) | (_temp << (64 - (18))); }))) ^
+                 ((__extension__ ({ uint64_t _temp = ((e)); (_temp >> (41)) | (_temp << (64 - (41))); })))) + ((e & f) ^ ((~e) & g));
+        temp2 = (((__extension__ ({ uint64_t _temp = ((a)); (_temp >> (28)) | (_temp << (64 - (28))); }))) ^ ((__extension__ ({ uint64_t _temp = ((a)); (_temp >> (34)) | (_temp << (64 - (34))); }))) ^
+                 ((__extension__ ({ uint64_t _temp = ((a)); (_temp >> (39)) | (_temp << (64 - (39))); })))) + ((a & b) ^ (a & c) ^ (b & c));
+        h = g;
+        g = f;
+        f = e;
+        e = d + temp1;
+        d = c;
+        c = b;
+        b = a;
+        a = temp1 + temp2;
+    }
+
+
+    state.h[0] += a;
+    state.h[1] += b;
+    state.h[2] += c;
+    state.h[3] += d;
+    state.h[4] += e;
+    state.h[5] += f;
+    state.h[6] += g;
+    state.h[7] += h;
+
+
+    a = b = c = d = e = f = g = h = temp1 = temp2 = 0;
+}

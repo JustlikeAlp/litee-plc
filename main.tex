@@ -1,0 +1,963 @@
+%%
+%% This is file `sample-sigconf.tex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% samples.dtx  (with options: `all,proceedings,bibtex,sigconf')
+%% 
+%% IMPORTANT NOTICE:
+%% 
+%% For the copyright see the source file.
+%% 
+%% Any modified versions of this file must be renamed
+%% with new filenames distinct from sample-sigconf.tex.
+%% 
+%% For distribution of the original source see the terms
+%% for copying and modification in the file samples.dtx.
+%% 
+%% This generated file may be distributed as long as the
+%% original source files, as listed above, are part of the
+%% same distribution. (The sources need not necessarily be
+%% in the same archive or directory.)
+%%
+%%
+%% Commands for TeXCount
+%TC:macro \cite [option:text,text]
+%TC:macro \citep [option:text,text]
+%TC:macro \citet [option:text,text]
+%TC:envir table 0 1
+%TC:envir table* 0 1
+%TC:envir tabular [ignore] word
+%TC:envir displaymath 0 word
+%TC:envir math 0 word
+%TC:envir comment 0 0
+%%
+%% The first command in your LaTeX source must be the \documentclass
+%% command.
+%%
+%% For submission and review of your manuscript please change the
+%% command to \documentclass[manuscript, screen, review]{acmart}.
+%%
+%% When submitting camera ready or to TAPS, please change the command
+%% to \documentclass[sigconf]{acmart} or whichever template is required
+%% for your publication.
+%%
+%%
+\documentclass[sigconf]{acmart}
+\usepackage{makecell}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{makecell}
+\usepackage[markup=underlined]{changes}
+\definechangesauthor[name={Original Text}, color=red]{old}
+\definechangesauthor[name={Revision}, color=blue]{rev}
+\DeclareRobustCommand{\chcite}[1]{\mbox{\cite{#1}}}
+% Recommended for the revised tables/plots.
+% ---------- Preamble additions ----------
+% Keep these only once in your main .tex file.
+
+
+
+% Recommended for the revised tables/plots.
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+%%
+%% \BibTeX command to typeset BibTeX logo in the docs
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    Bib\TeX}}}
+
+%% Rights management information.  This information is sent to you
+%% when you complete the rights form.  These commands have SAMPLE
+%% values in them; it is your responsibility as an author to replace
+%% the commands and values with those provided to you when you
+%% complete the rights form.
+\setcopyright{acmlicensed}
+\copyrightyear{2018}
+\acmYear{2018}
+\acmDOI{XXXXXXX.XXXXXXX}
+%% These commands are for a PROCEEDINGS abstract or paper.
+\acmConference[Conference acronym 'XX]{Make sure to enter the correct
+  conference title from your rights confirmation email}{June 03--05,
+  2018}{Woodstock, NY}
+%%
+%%  Uncomment \acmBooktitle if the title of the proceedings is different
+%%  from ``Proceedings of ...''!
+%%
+%%\acmBooktitle{Woodstock '18: ACM Symposium on Neural Gaze Detection,
+%%  June 03--05, 2018, Woodstock, NY}
+\acmISBN{978-1-4503-XXXX-X/2018/06}
+
+
+%%
+%% Submission ID.
+%% Use this when submitting an article to a sponsored event. You'll
+%% receive a unique submission ID from the organizers
+%% of the event, and this ID should be used as the parameter to this command.
+%%\acmSubmissionID{123-A56-BU3}
+
+%%
+%% For managing citations, it is recommended to use bibliography
+%% files in BibTeX format.
+%%
+%% You can then either use BibTeX with the ACM-Reference-Format style,
+%% or BibLaTeX with the acmnumeric or acmauthoryear sytles, that include
+%% support for advanced citation of software artefact from the
+%% biblatex-software package, also separately available on CTAN.
+%%
+%% Look at the sample-*-biblatex.tex files for templates showcasing
+%% the biblatex styles.
+%%
+
+%%
+%% The majority of ACM publications use numbered citations and
+%% references.  The command \citestyle{authoryear} switches to the
+%% "author year" style.
+%%
+%% If you are preparing content for an event
+%% sponsored by ACM SIGGRAPH, you must use the "author year" style of
+%% citations and references.
+%% Uncommenting
+%% the next command will enable that style.
+%%\citestyle{acmauthoryear}
+
+
+%%
+%% end of the preamble, start of the body of the document source.
+\begin{document}
+
+%%
+%% The "title" command has an optional parameter,
+%% allowing the author to define a "short title" to be used in page headers.
+\title{A Lightweight Trusted Execution Environment for Low-end Programmable Logic Controllers}
+
+%%
+%% The "author" command and its associated commands are used to define
+%% the authors and their affiliations.
+%% Of note is the shared affiliation of the first two authors, and the
+%% "authornote" and "authornotemark" commands
+%% used to denote shared contribution to the research.
+% \author{Heng Xu}
+% \authornote{Both authors contributed equally to this research.}
+% \orcid{1234-5678-9012}
+% \affiliation{%
+%   \institution{Institute of Information Engineering}
+%   \city{BeiJing}
+%   \country{China}}
+% \email{xuheng@iie.ac.cn}
+
+
+% \author{Kaixiang Liu}
+% \authornotemark[1]
+% \affiliation{%
+%   \institution{Central South University}
+%   \city{Changsha}
+%   \country{China}}
+% \email{kaixiangliu@csu.edu.cn}
+
+% \author{Zhiwen Pan}
+% \affiliation{%
+%   \institution{Institute of Information Engineering}
+%   \city{BeiJing}
+%   \country{China}}
+% \email{panzhiwen@iie.ac.cn}
+
+% \author{Dongliang Fang}
+% \affiliation{%
+%   \institution{Institute of Information Engineering}
+%   \city{BeiJing}
+%   \country{China}}
+% \email{fangdongliang@iie.ac.cn}
+
+% \author{Limin Sun}
+% \affiliation{%
+%   \institution{Institute of Information Engineering}
+%   \city{BeiJing}
+%   \country{China}}
+% \email{sunlimin@iie.ac.cn}
+
+
+
+
+
+%%
+%% By default, the full list of authors will be used in the page
+%% headers. Often, this list is too long, and will overlap
+%% other information printed in the page headers. This command allows
+%% the author to define a more concise list
+%% of authors' names for this purpose.
+% \renewcommand{\shortauthors}{Trovato et al.}
+
+%%
+%% The abstract is a short summary of the work to be presented in the
+%% article.
+\begin{abstract}
+Low-end Programmable Logic Controllers (LE-PLCs) are extensively utilized in the control loops of Industrial Control Systems (ICSs) for their simplicity and operational efficiency. Due to their high reliability requirements and limited computational resources, LE-PLCs face significant challenges in integrating robust security measures, rendering them vulnerable to serious threats. Trusted Execution Environment (TEE) is a cutting-edge security isolation mechanism
+offering robust protective capabilities; however, existing TEE solutions often require substantial hardware modifications or extensive software instrumentation, making them impractical for LE-PLCs.
+
+
+To overcome these limitations, we propose LiTEE-PLC, a lightweight Trusted Execution Environment specifically designed for LE-PLCs. LiTEE-PLC partitions LE-PLC software modules into secure and non-secure worlds based on defined isolation criteria
+and an established threat model. By leveraging the built-in Memory Protection Unit (MPU) hardware component in LE-PLCs to set different memory access permissions, it realizes efficient isolation between the two worlds with minimal software instrumentation and no hardware modifications. Moreover, LiTEE-PLC employs a selective protection mechanism based on the Minimum Trusted I/O Path, together with an identity-authentication triggering mechanism based on state estimation, thereby achieving peripheral access control and network access control with low resource overhead. Our evaluation demonstrates that LiTEE-PLC
+imposes minimal overhead on system resources. Specifically, LiTEE-PLC achieves an average runtime overhead of 0.98\%, with SRAM usage increasing by 2.31\% and FLASH usage rising by 1.82\%.
+
+\end{abstract}
+
+%%
+%% The code below is generated by the tool at http://dl.acm.org/ccs.cfm.
+%% Please copy and paste the code instead of the example below.
+%%
+\begin{CCSXML}
+<ccs2012>
+   <concept>
+       <concept_id>10002978.10003001.10003003</concept_id>
+       <concept_desc>Security and privacy~Embedded systems security</concept_desc>
+       <concept_significance>500</concept_significance>
+       </concept>
+ </ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Security and privacy~Embedded systems security}
+
+%%
+%% Keywords. The author(s) should pick words that accurately describe
+%% the work being presented. Separate the keywords with commas.
+\keywords{Trusted Execution Environment, Programmable Logic Controller, Memory Protection Unit, Industrial Control Systems }
+%% A "teaser" image appears between the author and affiliation
+%% information and the body of the document, and typically spans the
+%% page.
+
+
+% \received{20 February 2007}
+% \received[revised]{12 March 2009}
+% \received[accepted]{5 June 2009}
+
+%%
+%% This command processes the author and affiliation and title
+%% information and builds the first part of the formatted document.
+\maketitle
+
+\section{Introduction}
+
+\deleted[id=old]{Low-end programmable logic controllers~\chcite{LC-PLC2}(LE-PLCs~\chcite{gupta2004LC-PLC8low-end}, a.k.a. Low-cost PLCs or single-process PLCs~\chcite{hou2011LC-PLC0single-thread}), are class of economical, functionally-specific programmable logic controller (PLC) which is widely deployed in industrial control systems (ICS)~\chcite{LC-PLC1,LC-PLC3,LC-PLC4,LC-PLC2,LC-PLC5}. These devices are widely adopted in simple control loops, because of their efficiency and affordability~\chcite{LC-PLC6,alphonsus2016LC-PLC7IOPIN,kusuma2024LC-PLC9withoutOS}. Similar to traditional PLCs, the operational model of LE-PLCs generally adheres to a cyclic scanning mechanism, which sequentially performs input acquisition, program execution, output updating, and system communication to ensure both reliability and real-time performance of the control loops.}
+
+\added[id=rev]{Bare-metal programmable logic controllers (PLCs), including low-cost and single-process PLCs~\chcite{LC-PLC2,gupta2004LC-PLC8low-end,hou2011LC-PLC0single-thread}, are widely deployed in industrial control systems (ICSs)~\chcite{LC-PLC1,LC-PLC3,LC-PLC4,LC-PLC2,LC-PLC5}. These devices are adopted in simple and cost-sensitive control loops because of their efficiency and affordability~\chcite{LC-PLC6,alphonsus2016LC-PLC7IOPIN,kusuma2024LC-PLC9withoutOS}. Similar to traditional PLCs, they execute a cyclic scan that sequentially performs input acquisition, program execution, output updating, and system communication to maintain the reliability and real-time performance of control loops. With the advancement of information technologies, ICS architectures have gradually evolved from isolated systems into interconnected industrial networks. External operator access, engineering-station programming, remote maintenance, and file or program transfer have therefore become routine interactions with PLCs, making traditional internal network isolation insufficient as the only defense.}
+
+\deleted[id=old]{With the advancement of information technologies, ICS architectures have gradually evolved from isolated systems into an interconnected Industrial Internet. Consequently, traditional internal network isolation is no longer sufficient to defend against expanded attack surface such as legitimate external access, remote file transfers, remote maintenance. This makes LE-PLCs vulnerable to various of emerging threats, such as parameter tampering attacks~\chcite{eigner2016middle-attack1}, control program injection~\chcite{yoo2019control-inject1}, and false data injection~\chcite{gonen2020falsedata-inject1}. LE-PLCs were designed to be primarily focused on reliability and real-time performance, often omitting the internal deployment of security mechanisms. However, being the core component in control loops, any compromise of an LE-PLC directly impairs the stability of physical systems, leading to reduced productivity, system shutdowns, or even casualties. Therefore, implementing effective security measurements without disrupting regular LE-PLC operations is critical for ensuring the security of ICS.}
+
+\added[id=rev]{This connectivity turns communication and maintenance functions into attack paths to the physical process. Parameter tampering may change set points or runtime variables and drive the controller beyond safe operating ranges~\chcite{eigner2016middle-attack1}. Control-program injection may replace or modify the decision logic, causing the PLC to issue malicious or unsafe actuator commands~\chcite{yoo2019control-inject1}. False data injection may forge sensor values and mislead the controller into making incorrect feedback decisions~\chcite{gonen2020falsedata-inject1}. Because PLCs directly mediate sensing and actuation, these attacks can propagate from software compromise to physical consequences, including quality degradation, equipment damage, process shutdown, environmental incidents, and safety hazards. Therefore, effective security isolation must protect the control path without disrupting scan-cycle timing or the deterministic behavior expected in industrial deployments.}
+
+\deleted[id=old]{The Trusted Execution Environment (TEE) has emerged as a promising security solution in recent years~\chcite{li2024tee-sok1, paju2023tee-sok3, munoz2023tee-sok2}. It divides the computing system into a secure world and a non-secure world, enforcing strict access control through memory isolation. TEE implementations fall into two categories: hardware-based and software-based. The former, such as ARM TrustZone~\chcite{armv8a_trustzone}, Intel SGX~\chcite{costan2016intel}, and SANCUS~\chcite{noorman2013sancus}, run sensitive code in physically isolated memory with specialized hardware protection. The latter, such as PISTIS~\chcite{grisafi2022pistis} and S\chmu V~\chcite{ammar2019suv}, instrument non-secure code to monitor memory access and trigger verification. These technologies can effectively mitigate software-level attacks from the non-secure world~\chcite{li2024tee-sok1}, establishing a trusted runtime environment for critical applications. For LE-PLC, which directly manipulates physical systems, integrating it with TEE offers a promising path to enhance the ICS security.}
+
+\added[id=rev]{Memory-based security isolation, including trusted-execution-environment designs, provides a promising direction for protecting critical code and data~\chcite{li2024tee-sok1,paju2023tee-sok3,munoz2023tee-sok2}. Existing designs, however, are not a direct fit for bare-metal PLCs. Hardware isolation mechanisms such as ARM TrustZone~\chcite{armv8a_trustzone}, Intel SGX~\chcite{costan2016intel}, and SANCUS~\chcite{noorman2013sancus} can provide strong isolation, but they assume specific hardware support or platform architectures that may not be available on deployed microcontroller-class PLCs. Software-only isolation mechanisms such as PISTIS~\chcite{grisafi2022pistis} and S\chmu V~\chcite{ammar2019suv} preserve compatibility with legacy hardware, but their instruction-level checks or virtualization logic can increase verification frequency and code complexity. Thus, the problem is not whether hardware-assisted or software-assisted isolation can work in general, but how to obtain sufficient isolation for bare-metal PLCs by using hardware already present on such platforms and by exploiting the deterministic structure of PLC execution.}
+
+\deleted[id=old]{Nevertheless, LE-PLCs impose higher requirements on real-time performance and reliability, rendering existing TEE solutions less suitable for direct implementation. Hardware TEEs require modifications to the underlying architecture, which adds hardware complexity and may undermine reliability, imposing higher costs and uncertainties on ICS enterprises. Software TEEs, on the other hand, instrument security-check code into the non-secure world code to monitor each memory access, which also entails considerable resource overhead, making it difficult to meet the real-time requirements of LE-PLCs.}
+
+\deleted[id=old]{Despite these challenges, LE-PLCs exhibit the following characteristics that enable the development of lightweight TEE solutions. First, LE-PLCs predominantly utilize microcontroller architectures rather than x86 or high-performance ARM architectures which widely incorporate a hardware component called the Memory Protection Unit (MPU)~\chcite{grisafi2022mpu-insecurity}. As a memory protection mechanism designed to prevent software faults, the MPU has potential to facilitate memory isolation and access control for TEEs. Second, LE-PLCs generally follow minimalistic design principles~\chcite{LC-PLC1} and often operate in a bare-metal environment (i.e., without an operating system), where all software modules operate in privileged mode and share the entire memory space~\chcite{clements2017EPOXY}. This architecture enables bottom-up physical memory region partitioning and security isolation construction. Third, LE-PLCs strictly adhere to cyclic scanning operational patterns and have relatively singular functional responsibilities, making their MMIO access behaviors and I/O data changes highly predictable, enabling the reduction of verification frequency for normal access behaviors based on established behavioral baselines.}
+
+\added[id=rev]{The key problem addressed in this paper is memory and peripheral isolation for bare-metal PLCs whose software modules originally run in privileged mode and share a unified address space. This setting is different from OS-based systems, where processes, drivers, and user tasks can be isolated through mature kernel abstractions. In a bare-metal PLC, the runtime, protocol stack, control program, I/O buffers, and MMIO drivers are commonly linked into one firmware image. A compromise of externally exposed code can therefore lead to unauthorized reads or writes of control logic, I/O images, set points, or safety-critical peripherals. At the same time, PLCs provide an opportunity for lightweight isolation: their cyclic scan order is stable, their I/O data paths are explicit, and their MMIO interactions are usually fixed by the deployed control scenario. These properties make it possible to identify the trusted control path and reduce unnecessary runtime checks.}
+
+\deleted[id=old]{This paper proposes a Lightweight Trusted Execution Environment for Low-end Programmable Logic Controllers (LiTEE-PLC), which is a hardware-assisted, comprehensive, and lightweight TEE solution that effectively defends against software-based security threats faced by LE-PLCs while meeting their reliability and real-time requirements. To the best of our knowledge, this is the first work that systematically explores how to leverage the MPU hardware component to enhance TEE capabilities. The major works include: 1) Establishing the threat model and isolation criteria for LE-PLCs, followed by a fine-grained division of LE-PLC software modules into secure and non-secure worlds, thereby logically segregating core components from potential attack surface; 2) Leveraging the built-in MPU hardware component of LE-PLCs to manage access permissions for different memory regions, enabling memory isolation between the two worlds with minimal software modifications and no hardware modifications; 3) Propose a selective protection mechanism based on the Minimum Trusted I/O Path. By combining fine-grained program slicing with periodic heartbeat-based execution attestation, it precisely verifies accesses to shared peripherals and critical trusted data, thereby enabling peripheral access control with reduced verification frequency; 4) Proposing lightweight network access control by calculating the deviation between LE-PLC input data from network sensor and the expected physical system state, triggering identity authentication for field devices whenever input data persistently deviates from expectations, thereby mitigating false data injection attacks with reduced authentication overhead.}
+
+\added[id=rev]{This paper presents LiTEE-PLC, an MPU-assisted security isolation framework for bare-metal PLCs. LiTEE-PLC does not aim to build a general-purpose TEE. Instead, it uses PLC-specific execution semantics to construct two protection domains: a trusted domain that contains the control program, I/O images, trusted runtime services, and safety-critical MMIO paths; and an untrusted domain that contains externally exposed communication modules and protocol processing. The framework then configures the MPU to enforce memory and peripheral permissions between the domains and uses controlled software entry points only where cross-domain interaction is necessary. For shared I/O operations, LiTEE-PLC further protects the minimum trusted I/O path and uses I/O-data-driven triggers to invoke stronger verification only when the observed process behavior becomes suspicious.}
+
+The contributions of this paper are as follows:
+
+\deleted[id=old]{(1) \textbf{A hardware-assisted TEE architecture targeted at LE-PLCs.} To the best of our knowledge, this paper presents the first attempt to construct a hardware-assisted TEE architecture for LE-PLCs by leveraging the inherent MPU hardware component. We perform fine-grained decoupling of software modules into two distinct worlds and systematically investigate the utilization of MPU for enabling robust memory isolation and access control between the two worlds.}
+
+\deleted[id=old]{(2) \textbf{MPU-based memory isolation.} MPU is utilized to preset access permissions for the non-secure world across various memory regions, thereby effectively blocking unauthorized access behaviors at the hardware level and eliminating the need for instrumentation verification for most of the access behaviors.}
+
+\deleted[id=old]{(3) \textbf{Lightweight access control mechanisms for LE-PLCs.} Lightweight peripheral and network access controls are proposed based on MPU fault triggering and state estimation, ensuring comprehensive control of access behaviors across the two worlds while minimizing the frequency of both peripheral verification and identity authentication.}
+
+\deleted[id=old]{(4) \textbf{Experimental validation and performance evaluation.} Based on multi-scenario benchmark testing, results show that LiTEE-PLC demonstrates outstanding lightweight advantages while protecting against all major threats of PLCs, achieving an average runtime overhead of 0.98\%, a 2.31\% increase in SRAM usage, and a 1.82\% increase in FLASH usage.}
+
+\added[id=rev]{(1) \textbf{An I/O-aware partitioning method for bare-metal PLCs.} We propose a method for dividing PLC firmware into trusted and untrusted domains according to cyclic scan semantics, fixed MMIO usage, and I/O data dependencies. Rather than relying on a coarse division by software modules alone, the method identifies the minimum trusted I/O path that affects physical actuation and places the control program, I/O images, safety-critical runtime logic, and trusted peripheral operations in the trusted domain. Externally exposed communication and protocol-processing components are kept in the untrusted domain to reduce the attack surface of the trusted control path.}
+
+\added[id=rev]{(2) \textbf{An MPU-based management method for the two domains.} We show how to use the built-in MPU to enforce the above partition on bare-metal PLCs without hardware modification. LiTEE-PLC maps trusted code, trusted data, untrusted code, untrusted data, and peripheral regions into MPU-controlled address ranges, runs the untrusted domain in non-privileged mode, and relies on default-deny background-region behavior to block unauthorized access to trusted memory and safety-critical peripherals. Necessary cross-domain calls are routed through controlled software entry points, so most ordinary memory accesses no longer require full software instrumentation.}
+
+\added[id=rev]{(3) \textbf{An I/O-data-driven cross-domain access-control method.} We design lightweight runtime checks for the I/O interactions that cannot be completely separated. For trusted outputs sent through shared peripherals, LiTEE-PLC protects the minimum trusted I/O path and uses heartbeat-based execution attestation to detect skipped or forged sending operations. For networked sensor inputs, LiTEE-PLC estimates the expected process state and triggers stronger data-source verification only when input deviations persist within a sliding window. This design focuses on I/O-data-driven protection rather than claiming to solve general identity authentication or general access control.}
+
+
+
+
+
+\label{chap2}
+\begin{table*}[htbp]
+\centering
+\caption{Comparison between LiTEE-PLC and state-of-the-art protection  methods  for Low-End Embedded Devices}
+\label{tab:prior_work}
+\footnotesize
+\begin{tabular}{|p{1.5cm}|p{1.5cm}|p{1.8cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}
+\toprule
+\textbf{Name} &
+\begin{tabular}[c]{@{}l@{}}\textbf{No} \\ \textbf{Hardware} \\ \textbf{Modification}\end{tabular} &
+\begin{tabular}[c]{@{}l@{}}\textbf{Memory} \\ \textbf{Isolation} \\ \textbf{Verification} \\ \textbf{Frequency}\end{tabular} &
+\begin{tabular}[c]{@{}l@{}}\textbf{Target} \\ \textbf{Firmware}\end{tabular} &
+\begin{tabular}[c]{@{}l@{}}\textbf{Peripheral} \\ \textbf{Access} \\ \textbf{Control} \\ \textbf{Support}\end{tabular} &
+\begin{tabular}[c]{@{}l@{}}\textbf{Peripheral} \\ \textbf{Access} \\ \textbf{Control} \\ \textbf{Verification} \\ \textbf{Frequency}\end{tabular} &
+\begin{tabular}[c]{@{}l@{}}\textbf{Network} \\ \textbf{Access} \\ \textbf{Control} \\ \textbf{Support}\end{tabular} &
+\begin{tabular}[c]{@{}l@{}}\textbf{Network} \\ \textbf{Access} \\ \textbf{Control} \\ \textbf{Verification} \\ \textbf{Frequency}\end{tabular} &
+\textbf{Attack Model} \\ \midrule
+SANCUS \cite{noorman2013sancus}         & $\times$ & Infrequent & RTOS & \checkmark & Frequent & $\square$ & Frequent & Weak$^\dagger$ \\ \hline
+TyTAN\cite{brasser2015tytan}         & $\times$ & Infrequent & RTOS & \checkmark & Frequent & $\square$ & Frequent & Weak$^\dagger$ \\ \hline
+S$\mu$V\cite{ammar2019suv}        & \checkmark & Frequent & Bare-metal & \checkmark & Frequent & $\times$ & $\times$ & Weak$^\dagger$ \\ \hline
+PISTIS\cite{grisafi2022pistis}         & \checkmark & Frequent & Bare-metal & \checkmark & Frequent & $\times$ & $\times$ & Weak$^\dagger$ \\ \hline
+M2MON\cite{khan2021m2mon}          & \checkmark & Infrequent & RTOS & \checkmark & Frequent & $\times$ & $\times$ & Weak$^\dagger$ \\ \hline
+$\mu$BOX\cite{zhou2024ubox}           & \checkmark & Moderate & RTOS + Bare-metal & $\times$ & $\times$ & $\times$ & $\times$ & Weak$^\dagger$ \\ \hline
+\textbf{LiTEE-PLC} & \textbf{\checkmark} & \textbf{Moderate} & \textbf{Bare-metal} & \textbf{\checkmark} & \textbf{Infrequent} & \textbf{\checkmark} & \textbf{Infrequent} & \textbf{Strong} \\ \bottomrule
+\end{tabular}
+
+\medskip
+\raggedright
+\textbf{\checkmark}: Support \quad \textbf{$\square$}: Partial Support \quad \textbf{$\times$}: No Support \\
+$^\dagger$\textbf{Weak}: Does not consider special threats in industrial environments, e.g., false data injection attacks and malware present on the device.
+\end{table*}
+
+% ============================================================
+% 1) Replace the paper-organization paragraph at the end of Introduction.
+% ============================================================
+
+\deleted[id=old]{The remainder of this paper is organized as follows: Chapter~\ref{chap2} reviews related work and establishes the context for our research; Chapter~\ref{chap3} elaborates on the theoretical foundations and threat model; Chapter~\ref{chap4} details the architecture design of LiTEE-PLC; Chapter~\ref{chap5} introduces the details of system implementation; Chapter~\ref{chap6} presents a thorough security analysis; Chapter~\ref{chap7} discusses performance evaluation results; Chapter~\ref{chap8} highlights future research directions; and Chapter~\ref{chap9} concludes with a summary of the research contributions.}
+
+\added[id=rev]{The remainder of this paper is organized as follows. Section~\ref{chap3} presents the background and threat model. Section~\ref{chap4} describes the design of LiTEE-PLC. Section~\ref{chap5} introduces the implementation details. Section~\ref{chap6} provides the security analysis. Section~\ref{chap7} evaluates performance and resource overhead. Section~\ref{chap8} discusses limitations and future directions. Section~\ref{chap2} reviews related work, and Section~\ref{chap9} concludes the paper.}
+
+% ============================================================
+% 2) Remove Related Work from its original position after Introduction.
+% Place the rewritten Related Work section before the Conclusion section.
+% Keep the label chap2 if other parts of the paper already refer to it.
+% ============================================================
+
+\deleted[id=old]{The Related Work section was originally placed immediately after the Introduction.}
+
+\added[id=rev]{The Related Work section is moved to the end of the paper, before the Conclusion, so that the problem statement, design, implementation, and evaluation are presented before positioning LiTEE-PLC against prior work.}
+
+% ============================================================
+% 3) Move and rewrite the proposal-summary paragraph.
+% Insert the added paragraph in Introduction, immediately before the contribution list.
+% Delete the old version from Related Work.
+% ============================================================
+
+\deleted[id=old]{In this paper, we propose a hardware-assisted, lightweight TEE solution with comprehensive protection capabilities. Based on the predictable behavior and streamlined hardware architecture of LE-PLCs, we systematically investigate the application of the MPU in constructing TEEs. This includes fine-grained decoupling of LE-PLC software modules to clarify resource access in two worlds, configuring MPU memory regions to set access permissions and using local instrumentation to construct the boundary between worlds, as well as leveraging the Minimum Trusted I/O Path to achieve comprehensive peripheral access control while minimizing verification frequency. Compared to hardware TEEs, our solution avoids modifications to the underlying architecture; compared to software-based TEEs, it significantly reduces the need for frequent instrumentation checks. Moreover, mitigate the false data injection attacks originated by networked sensors, we derive inspiration from anomaly based dynamic access control~\chcite{Sdn} and introduce a lightweight network access control scheme based on state estimation. In particular, we optimize the design of the sliding window in the anomaly detection module, effectively defending against data injection attacks while reducing false alarms that trigger identity authentication events, thereby guarantee triggering authentication against all kinds of data injection behaviors and minimizing false alarms that could trigger unnecessary authentication.}
+
+\added[id=rev]{This paper presents LiTEE-PLC, an MPU-assisted security isolation framework for bare-metal PLCs. LiTEE-PLC does not aim to build a general-purpose trusted execution environment. Instead, it uses PLC-specific execution semantics to construct two protection domains: a trusted domain that contains the control program, I/O images, trusted runtime services, and safety-critical MMIO paths; and an untrusted domain that contains externally exposed communication modules and protocol processing. The framework configures the MPU to enforce memory and peripheral permissions between the domains and uses controlled software entry points only where cross-domain interaction is necessary. For shared I/O operations, LiTEE-PLC protects the minimum trusted I/O path and uses I/O-data-driven triggers to invoke stronger verification only when the observed process behavior becomes suspicious.}
+
+% ============================================================
+% 4) Rewritten Related Work section.
+% Move this whole section to the position before \section{Conclusion}.
+% The old three-part version should be removed or commented out.
+% ============================================================
+
+\section{Related Work}
+\label{chap2}
+
+% If Table~\ref{tab:prior_work} is kept, move it here together with the Related Work section.
+\added[id=rev]{Table~\ref{tab:prior_work} compares LiTEE-PLC with representative isolation and protection mechanisms for resource-constrained embedded controllers.}
+
+% Suggested revised caption:
+% \caption{Comparison between LiTEE-PLC and representative isolation methods for resource-constrained embedded controllers}
+
+\textbf{Hardware-assisted isolation and mitigation.}
+\deleted[id=old]{In recent years, various hardware TEEs have been widely adopted to achieve secure isolation. ARM TrustZone~\chcite{armv8a_trustzone,armv8m_trustzone} achieves secure hardware-level isolation by partitioning the system into a secure world and a non-secure world. For instance, TEE-PLC introduced high-frequency verification for network access control in advanced PLC systems~\chcite{li2024tee-plc}). Intel SGX~\chcite{costan2016intel} facilitates application-level isolation, allowing code and data to execute within encrypted enclaves, offering strong resistance against compromise even during operating system breaches. AMD SEV~\chcite{kaplan2016amd} enhances cloud security by encrypting virtual machine memory to protect data confidentiality. While these hardware mechanisms provide a solid foundation for trusted computing, they often rely on complex and costly hardware features. Various academic proposals have also introduced hardware TEEs suitable for resource-constrained devices to mitigate these high costs. Sancus~\chcite{noorman2013sancus} introduces a cost-efficient, fully hardware-based trusted computing base designed to provide remote attestation and inter-module communication. TrustLite~\chcite{koeberl2014trustlite} employs memory access controls related to execution to isolate embedded tasks and ensure secure interrupt handling. TyTAN~\chcite{brasser2015tytan} extends TrustLite with support for dynamic task loading and secure inter-task communication, emerging as the first TEE architecture to provide dynamic roots of trust alongside real-time guarantees for resource-constrained devices. GAROTA~\chcite{aliaj2022garota} introduces a trust anchor for low-end microcontrollers (MCUs) that guarantees the execution of critical functions upon associated trigger events. However, hardware-based TEEs often require significant architectural redesigns, leading to challenges such as heightened complexity, diminished reliability, high costs from hardware upgrades, and reduced flexibility due to time constraints. As specialized devices in industrial control systems, LE-PLCs impose stringent requirements for real-time performance and reliability. As a result, industrial enterprises are hesitant to replace existing LE-PLC devices and often avoid procuring systems with overly complex hardware designs. Moreover, these solutions fail to optimize verification frequency for peripheral and network access control, requiring verification of numerous legitimate accesses, which exacerbates runtime overhead issues in LE-PLC systems.}
+
+\added[id=rev]{Hardware-assisted isolation mechanisms protect critical code and data by enforcing access-control decisions below ordinary application logic. ARM TrustZone~\chcite{armv8a_trustzone,armv8m_trustzone} separates execution into secure and non-secure states. Intel SGX~\chcite{costan2016intel} protects application enclaves with enclave metadata, controlled entry/exit, and memory-encryption support. AMD SEV~\chcite{kaplan2016amd} protects virtual machines by encrypting guest memory. A PLC-oriented TrustZone-based design has also been used to mediate network access in advanced PLC platforms~\chcite{li2024tee-plc}. In addition, Sancus~\chcite{noorman2013sancus}, TrustLite~\chcite{koeberl2014trustlite}, TyTAN~\chcite{brasser2015tytan}, and GAROTA~\chcite{aliaj2022garota} provide hardware roots of trust, protected module execution, secure interrupt handling, remote attestation, or trigger-based execution guarantees for constrained devices. These mechanisms are effective when the target platform already provides the required security extensions. However, their hardware assumptions are not always satisfied by deployed microcontroller-class PLCs. The required features may include separated security states, secure-monitor transitions, enclave metadata, memory-encryption engines, attestation roots, protected inter-module control logic, or dedicated bus/peripheral firewalls. Integrating such features into an existing PLC product line may require a different SoC, a redesigned firmware boot and privilege model, and renewed validation of peripheral interactions. LiTEE-PLC therefore takes a narrower path: it uses the MPU that is already available on many microcontroller-class PLC platforms and combines MPU permissions with PLC-specific I/O semantics, instead of assuming enclave memory encryption, a separate secure monitor, or new peripheral-security hardware.}
+
+\deleted[id=old]{Many studies have attempted to leverage existing hardware features to mitigate attacks on embedded systems. For example, EPOXY~\chcite{clements2017EPOXY} and M2MON~\chcite{khan2021m2mon} identify privileged instructions at compile time and instrument their access to peripherals. Unfortunately, these techniques require switching to privileged mode for every peripheral I/O operation, which is unsuitable for LE-PLC systems requiring real-time performance. Meanwhile, hard-coded MMIO instrumentation also risks incomplete access control. ACES~\chcite{clements2018aces} divides a program into multiple isolated regions at compile time, reducing the extent of memory exposure under attack. However, due to over-privilege (one region can access unnecessary resources at runtime), LE-PLCs may still face security risks. MINION~\chcite{kim2018minion} introduces thread-level isolation by setting memory ranges for each thread through static analysis. Since many bare-metal embedded systems lack thread abstractions, MINION's approach is difficult to apply directly to LE-PLCs. Targeting multi-core systems, uBOX~\chcite{zhou2024ubox} uses the MPU and non-privileged store instructions to build a lightweight sandbox mechanism supporting cross-core isolation at the same privilege level. However, it depends on the independence of an additional core, making it unsuitable for single-core LE-PLC systems. Its reliance on MPU bypass functionality also renders it incompatible with the ARMv8-M baseline architecture, further limiting its extensibility. Overall, these schemes each emphasize a specific security aspect and aim to mitigate partial threats at an acceptable runtime overhead. Yet most focus on only a single link in the attack chain. They possess inherent limitations and fail to comprehensively address the diverse security needs of broader applications.}
+
+\added[id=rev]{Other hardware-assisted mitigations reuse commodity embedded hardware rather than requiring full security extensions. EPOXY~\chcite{clements2017EPOXY} and M2MON~\chcite{khan2021m2mon} identify privileged operations at compile time and mediate peripheral access by instrumentation. This strategy can protect sensitive hardware operations, but a PLC may execute MMIO operations in every scan cycle; forcing every peripheral operation through a privileged transition can increase scan-time jitter and delay actuator updates. ACES~\chcite{clements2018aces} partitions firmware into isolated compartments, thereby reducing memory exposure. Its compartment permissions, however, may still be over-privileged: a compartment can retain access to resources that are not needed for the specific runtime step being executed. In a PLC, such over-privilege is dangerous because unnecessary access to I/O images, set points, or actuator-related MMIO can directly influence the physical process. MINION~\chcite{kim2018minion} derives thread-level memory ranges through static analysis, but many bare-metal PLC runtimes do not expose threads as the isolation unit; the cyclic scan, not a general thread scheduler, is the dominant execution structure. uBOX~\chcite{zhou2024ubox} builds MPU-based isolation with a design that assumes a separate core and privileged code that can deliberately issue unprivileged memory accesses to bypass the active MPU context. This assumption is difficult to apply to single-core bare-metal PLCs, and the required MPU-bypass or unprivileged-access behavior is not part of the baseline execution model available on many ARMv8-M baseline devices. LiTEE-PLC differs from these mitigations by using the cyclic scan and I/O data dependencies as isolation hints. It does not mediate every MMIO operation uniformly; instead, it separates ordinary untrusted communication from the minimum trusted I/O path that affects physical actuation.}
+
+\textbf{Software-based isolation and instrumentation.}
+\deleted[id=old]{Software TEEs employ software-only methods to achieve secure isolation, eliminating the need for hardware modifications required by earlier approaches. Security MicroVisor (S\chmu V)~\chcite{ammar2019suv} developed assembly-level instrumentation and software virtualization techniques, integrating secure virtual instruction into low-cost IoT devices through the toolchain, specifically targeting Harvard-based AVR architectures. PISTIS~\chcite{grisafi2022pistis} extends this approach to more complex Von Neumann architectures, providing memory isolation, remote attestation, and secure updates. Both use full-stack instrumentation and runtime virtual instructions to achieve strong isolation between trusted modules and applications, while still allowing shared peripherals. Despite targeting low-end embedded devices, these software TEEs face two main limitations: 1) for two-world isolation and peripheral access control, they rely on extensive instrumentation of code in the untrusted world, causing every memory access behavior to be verified and resulting in high runtime overhead; 2) in network access control for LE-PLC input data from network sensor, they lack specific considerations for security and runtime overhead optimization. Given that network input is widely used in PLCs, this issue cannot be overlooked.}
+
+\added[id=rev]{Software-based isolation avoids requiring new security hardware by rewriting, instrumenting, or virtualizing untrusted code. Security MicroVisor (S\chmu V)~\chcite{ammar2019suv} uses assembly-level instrumentation and software virtualization to introduce secure virtual instructions on low-cost devices. PISTIS~\chcite{grisafi2022pistis} extends similar ideas to more complex Von Neumann architectures and supports memory isolation, remote attestation, and secure updates. These approaches preserve compatibility with legacy hardware, but their protection often depends on frequent checks on memory accesses, control transfers, or peripheral operations. They can also allow trusted and untrusted code to share peripherals by mediating accesses through software-defined interfaces. In this context, allowing shared peripherals means that the same physical device, such as a network interface, remains usable by both trusted and untrusted logic, while software checks determine whether each access is legal. This is useful for compatibility, but it does not by itself distinguish a safety-critical actuator command from non-critical protocol traffic unless the design incorporates PLC-specific I/O semantics.}
+
+\added[id=rev]{The consequences are more severe for PLCs than for many general embedded devices. First, a PLC repeatedly executes a deterministic scan cycle, and even modest verification overhead can accumulate into scan-time jitter or missed actuation deadlines. Such timing deviations may not only reduce throughput, but also alter when outputs are applied to the physical process. Second, network inputs in a PLC are not ordinary application messages. They often correspond to remote sensor values or inter-controller signals that are copied into the input image and used by the control program to compute actuator outputs. If these inputs are forged, replayed, or delayed, the controller may make incorrect feedback decisions and drive the plant into unsafe states. If every network input is authenticated with expensive checks, the scan cycle may suffer unacceptable latency; if network inputs are not checked in a process-aware way, false-data injection may remain effective. LiTEE-PLC addresses this gap by combining MPU-enforced memory isolation with selective software checks: ordinary memory accesses are handled by MPU permissions, the minimum trusted I/O path is protected explicitly, and stronger source verification for network sensor data is triggered only when state-estimation deviations persist within a sliding window.}
+
+\section{Background \& Threat Model}
+\label{chap3}
+
+\subsection{Bare-metal Programmable Logic Controllers}
+\label{sec:plc_background}
+
+\deleted[id=old]{As the core devices within control loops, LE-PLCs collect sensor data, execute control logic, manage actuator states, and respond to operator requests. LE-PLCs typically execute in a cyclic scanning mode that includes four steps: (1) During the input acquisition phase, sensor data is collected through physical pins and network buffers and updated to the LE-PLC's internal input buffer (a.k.a. the input image). (2) During the program execution phase, the LE-PLC performs logical operations, comparisons, counting, timing, and other functions based on the data stored in both input and output buffer (a.k.a. output image), then updates the results into the output buffer. (3) During the output updating phase, data from the output buffer is written simultaneously to physical pins and network buffers, thereby actuating field devices (e.g. actuators, other controllers). (4) During the system communication phase, the LE-PLC prepares for the subsequent scan cycle by conducting operations such as system checks, clock resets, report transmission.}
+
+\added[id=rev]{As the core devices within control loops, bare-metal PLCs collect sensor data, execute control logic, update actuator states, and respond to operator or engineering requests. A typical PLC scan cycle contains four phases. In the input acquisition phase, sensor values from physical pins or network buffers are copied into the internal input image. In the program execution phase, the control program reads the input image and current output image, executes logic such as comparison, counting, timing, and arithmetic operations, and writes the results into the output image. In the output updating phase, the output image is committed to physical pins or network buffers and thereby affects actuators or downstream controllers. In the system communication phase, the PLC performs auxiliary tasks such as status reporting, clock maintenance, and preparation for the next scan cycle.}
+
+\added[id=rev]{This cyclic structure is not only background knowledge, but also the motivation for LiTEE-PLC's methodology in Section~\ref{chap4}. The scan cycle exposes a stable order between sensing, computation, actuation, and communication. It also makes the security relevance of each data object explicit: input images influence control decisions, output images influence actuation, and MMIO operations connect firmware states to physical devices. Therefore, LiTEE-PLC uses the scan semantics to identify which code and data must remain in the trusted domain, which communication components can be left in the untrusted domain, and which cross-domain interactions must be controlled. In particular, the fixed I/O path from input acquisition to output updating motivates the minimum trusted I/O path used later for selective peripheral protection.}
+
+\added[id=rev]{The same structure also explains why generic embedded isolation is insufficient for PLCs. In many bare-metal PLCs, the runtime, protocol stack, control program, I/O images, and peripheral drivers are linked into a single firmware image and execute without process or kernel isolation. Once externally exposed communication code is compromised, the attacker may reach control data or actuator-related MMIO through the shared address space. At the same time, checking every memory or peripheral access would directly increase scan-cycle latency. These two observations lead to the design goal of Section~\ref{chap4}: separate the trusted control path from exposed communication logic, while enforcing only the checks needed for memory, peripheral, and I/O-data interactions that can affect the physical process.}
+
+\subsection{Memory Protection Unit}
+\label{sec:mpu_background}
+
+\deleted[id=old]{The MPU aims at providing hardware-based memory isolation capabilities and is widely supported in many embedded architectures~\cite{mpu-10,mpu-13,mpu-8,grisafi2022mpu-insecurity,zhou2023mpu-understanding}, including ARM, MSP430, and RISCV. The MPU offers a set of hardware registers that, when configured, specifying memory regions with distinct access permissions for privileged and non-privileged modes, including read, write, and execute permissions.Any memory space not covered by these regions is referred to as the Background Region. Access permissions of the Background Region depends on the processor's running privilege level: privileged access is allowed by default, whereas non-privileged access triggers a MemManage exception. In addition, any memory access that violates the MPU configuration also triggers a MemManage exception. When configuring the system memory region's access permissions via the MPU, restrictions are imposed so that only privileged-level software may access that region. Any attempt by non-privileged-level software to do so will trigger a Bus fault, analogous to a MemManage exception.}
+
+\added[id=rev]{The MPU provides hardware-supported memory permission checks and is widely supported in embedded architectures~\chcite{mpu-10,mpu-13,mpu-8,grisafi2022mpu-insecurity,zhou2023mpu-understanding}, including ARM, MSP430, and RISC-V. An MPU configuration defines memory regions and assigns each region access permissions for privileged and non-privileged execution, such as read, write, and execute permissions. Memory not covered by an explicitly configured MPU region belongs to the background region. On typical ARM microcontrollers, privileged code can access the background region by default, whereas non-privileged access to an uncovered or disallowed region triggers a memory-management fault or a bus fault, depending on the accessed address range.}
+
+\added[id=rev]{This mechanism suggests a lightweight way to construct isolation on bare-metal PLCs. Instead of instrumenting every load and store in software, LiTEE-PLC can place externally exposed code in non-privileged mode and use MPU regions to allow only the memory and peripheral ranges required by the untrusted domain. Trusted code, trusted data, I/O images, and safety-critical peripherals can be left outside the untrusted domain's accessible regions or mapped with stricter permissions. As a result, most illegal accesses are blocked by hardware faults rather than by frequent software checks. Section~\ref{chap4} builds on this observation to define the two-domain layout, the MPU permission policy, and the controlled software entry points needed for legitimate cross-domain calls.}
+
+\added[id=rev]{However, the MPU  is not sufficient for the complete PLC setting. First, an MPU region controls addresses rather than I/O semantics, so it cannot by itself decide whether a network transmission carries a safety-critical actuator command or non-critical protocol traffic. Second, shared peripherals may be needed by both trusted and untrusted logic, which means coarse-grained denial of all peripheral access would break normal PLC functions. Third, networked sensor data reaches the control program through the input image, so memory isolation cannot determine whether the received value is physically plausible. These limitations motivate the additional mechanisms introduced in Section~\ref{chap4}: minimum-trusted-I/O-path protection for shared peripheral operations and state-estimation-based triggering for suspicious network inputs.}
+
+\subsection{Design Challenges for MPU-Assisted PLC Isolation}
+\label{sec:background_challenges}
+
+\added[id=rev]{MPU-assisted isolation for bare-metal PLCs faces three concrete challenges. The first challenge is domain partitioning: the control program, I/O images, setpoints, pin-mapping code, and safety-related drivers must be separated from externally exposed communication logic without breaking the PLC scan cycle. The second challenge is enforceable domain management: after partitioning, the system must translate the partition result into MPU regions, privilege-mode transitions, entry checks, and deployable binaries that can be reproduced by the build system. The third challenge is I/O-data-driven access control: PLCs often use shared communication peripherals and networked sensors, so address-level isolation alone cannot decide whether a data transfer carries actuator commands, ordinary protocol traffic, or forged sensor values. Section~\ref{chap4} addresses these challenges in the same order.}
+
+\added[id=rev]{For shared peripherals, the main difficulty is that security-critical and non-critical operations can traverse the same physical interface. A networked PLC may use the same Ethernet/SPI path to send actuator commands, receive sensor data, and exchange HMI or engineering messages. Moving the entire protocol stack into the trusted domain would enlarge the trusted code base, while checking every MMIO operation would increase scan-cycle latency. For network sensor inputs, the difficulty is different: a forged value may have a valid memory address and a valid packet format, but still be inconsistent with the physical process. Therefore, LiTEE-PLC uses a minimum trusted output path for actuator-related transmissions and a state-estimation-driven input check for network sensor data.}
+
+\subsection{Threat Model}
+\label{sec:threat_model}
+
+\deleted[id=old]{Our objective is to defend against all software-based attacks on the LE-PLC. Physical, hardware, and side-channel attacks fall outside the scope of this paper. We consider protection against physical attacks to be an orthogonal issue, with countermeasures including device deployment within physical shields or strict physical access control systems~\cite{ravi2004physical-tamper}. By assuming that the adversary has already possessed high-level privileges on other devices or network links that interact with the LE-PLC, we categorize the core threats to LE-PLCs as follows (see Figure~\ref{fig1}) .}
+
+\added[id=rev]{Our objective is to defend against software-based attacks on the PLC firmware, memory, I/O data, and network-facing control path. Physical tampering, hardware modification, and side-channel attacks fall outside the scope of this paper. These threats are independent of the memory and peripheral isolation problem studied here: they require an attacker to physically access the device, alter hardware components, or extract information through physical leakage channels, whereas LiTEE-PLC focuses on restricting software-controlled memory, MMIO, and I/O-data flows after the device has booted. They are commonly addressed by deployment-level or hardware-level defenses, such as locked cabinets, tamper-resistant enclosures, controlled maintenance procedures, and physical access control systems~\chcite{ravi2004physical-tamper}. Under this scope, we assume that the adversary may already control network links, external devices, or vulnerable software components interacting with the PLC, and we categorize the core software-level threats as follows (see Figure~\ref{fig1}).}
+
+\paragraph{Assumptions}
+\added[id=rev]{We make the following assumptions. The protected PLC platform provides an MPU that can enforce region-based access permissions for privileged and non-privileged execution. The PLC firmware source code and build process are available to the vendor, so that linker-script placement and compiler-assisted rewriting can be applied before deployment. The PLC vendor and firmware-signing infrastructure are trusted. Physical tampering, hardware replacement, and side-channel attacks are outside the scope of this work and are handled by deployment-level and hardware-level protections. Devices that exchange network data with the PLC, such as engineering stations, HMI stations, and sensors, can be provisioned with device identities, keys, sequence numbers, or other authentication metadata used by the access-control path.}
+
+
+
+\section{LiTEE-PLC Methodology}
+\label{chap4}
+
+\deleted[id=old]{The original Chapter 4 organized the methodology around assumptions, architecture description, memory isolation, and lightweight access control.}
+
+\added[id=rev]{LiTEE-PLC follows the three contributions stated in the Introduction. It first partitions the PLC firmware into a trusted domain and an untrusted domain. It then uses the MPU and compiler-generated metadata to manage the two domains at load time and runtime. Finally, it applies I/O-data-driven access control to the cross-domain paths that cannot be handled by address permissions alone. Figure~\ref{fig:methodology_overview} summarizes the three-stage methodology.}
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=\textwidth]{4-overview.png}
+    \caption{Overview of the LiTEE-PLC methodology. The framework first partitions PLC firmware into trusted and untrusted domains, then maps the partition result to MPU-managed regions and controlled entry points, and finally applies I/O-data-driven checks to shared output and network-input paths.}
+    \label{fig:methodology_overview}
+\end{figure*}
+
+\subsection{Partitioning Trusted and Untrusted Domains}
+\label{sec:domain_partitioning}
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=\textwidth]{4.1.png}
+    \caption{Partitioning trusted and untrusted domains. LiTEE-PLC takes the firmware source, control program, I/O-image definitions, peripheral map, and communication modules as inputs; marks trusted roots and untrusted exposure roots; resolves function, data-object, and MMIO dependencies; and outputs the trusted-domain and untrusted-domain object sets.}
+    \label{fig:domain_partitioning}
+\end{figure*}
+
+
+\added[id=rev]{Figure~\ref{fig:domain_partitioning} shows the partitioning stage in detail. The partitioning stage takes the PLC firmware source, control program, I/O image definitions, peripheral map, and communication modules as input. It outputs two object sets. The trusted-domain set contains objects whose corruption can directly change sensing, control computation, or actuation. The untrusted-domain set contains externally exposed communication code and buffers whose compromise should not directly change the trusted control path. The overall role of this stage in the full LiTEE-PLC pipeline is shown in Figure~\ref{fig:methodology_overview}.}
+
+\added[id=rev]{LiTEE-PLC partitions firmware objects at function, data-object, and MMIO-region granularity. Trusted code includes the control program, scan-cycle scheduler, I/O-image update logic, pin-mapping routines, trusted update service, and entry handlers. Trusted data includes input images, output images, setpoints, actuator command variables, Kalman-filter state, device-identity metadata, and the counters used by the protected I/O path. Trusted MMIO includes physical I/O registers, chip-select registers on actuator-related paths, watchdog registers, and other safety-related peripheral registers. Untrusted code includes the network driver, TCP/IP or Modbus processing logic, engineering/HMI communication handlers, and other externally reachable parsers. Untrusted data includes the network stack state, protocol buffers, socket/session buffers, temporary packet fields, and non-critical communication variables.}
+
+\added[id=rev]{The partitioning procedure is deterministic. First, LiTEE-PLC marks PLC control outputs, input/output images, setpoints, and safety-related MMIO symbols as trusted roots. Second, it marks network-facing parser functions, protocol handlers, network buffers, and engineering/HMI communication routines as untrusted exposure roots. Third, it resolves symbol references and call edges from these roots. Objects that are required to compute or commit actuator outputs are assigned to the trusted domain, while objects used only for receiving, parsing, or buffering external messages are assigned to the untrusted domain. Fourth, if an object is required by both domains, LiTEE-PLC does not duplicate the whole module; it keeps the large communication logic in the untrusted domain and exposes only a controlled entry or replay routine in the trusted domain.}
+
+
+\subsection{MPU-Based Management of the Two Domains}
+\label{sec:mpu_domain_management}
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=\textwidth]{4.2.png}
+    \caption{MPU-based management of the two domains. The compiler phase creates SVC entry stubs, hardened interrupt paths, and secure-binary metadata; the deployment phase uses the trusted loader, linker symbols, MPU policy table, and metadata to construct an MPU-aligned memory layout; and the runtime phase allows untrusted execution to enter trusted services only through checked SVC and fault-handling paths.}
+    \label{fig:mpu_domain_management}
+\end{figure*}
+
+\added[id=rev]{Figure~\ref{fig:mpu_domain_management} summarizes how the partition result is converted into deployable and enforceable domains. The MPU-management stage has two phases. The deployment phase takes the trusted firmware image, linker-generated section symbols, MPU policy table, loader, and untrusted-binary metadata as input. It outputs a memory image in which trusted and untrusted objects are placed at MPU-aligned addresses. The runtime phase takes this deployed image as input and enforces privilege separation, authorized entry invocation, and fault handling whenever the untrusted domain executes.}
+
+\subsubsection{Deployment phase: configure, deploy, and transfer}
+
+\added[id=rev]{The trusted deployment code configures MPU permissions in three steps. It reads linker symbols such as \texttt{\_\_trusted\_text\_start}, \texttt{\_\_trusted\_data\_end}, \texttt{\_\_untrusted\_text\_start}, and \texttt{\_\_svc\_entry\_start}; rounds each base and limit to the MPU alignment required by the target MCU; and writes the base address, size encoding, access-permission bits, execute-never bit, and enable bit into MPU registers. Trusted code and trusted data are either left in the privileged background region or mapped as privileged-only regions. Untrusted code and data are mapped with explicit non-privileged permissions. After all entries are written, the MPU is enabled before control is transferred to the untrusted domain.}
+
+\added[id=rev]{The loader deploys the untrusted binary by parsing the secure-binary metadata generated by the compiler. The metadata contains the binary length, section count, section type, load address, entry offset, memory size, file offset, and permission flags. For each section, the loader checks that the destination address falls inside the pre-allocated untrusted region, copies the bytes from the binary payload, zero-initializes \texttt{.bss}-like areas, and rejects sections whose permissions do not match the MPU policy. The loader records the initial program counter, stack pointer, and authorized entry table after the copy finishes.}
+
+\added[id=rev]{Control transfer is performed through a privilege-switch stub. Before entering untrusted code, the trusted runtime saves live registers, clears registers that may contain trusted values, installs the untrusted stack pointer, writes the untrusted entry address, and sets the processor to non-privileged mode. The untrusted domain can return to trusted services only through authorized SVC entries. On each SVC entry or fault, the handler validates the SVC number and the caller program counter against the authorized entry range before dispatching a trusted routine.}
+
+\begin{table}[t]
+\centering
+\caption{MPU region layout for non-privileged execution.}
+\label{tab:mpu_regions}
+\footnotesize
+\begin{tabular}{llll}
+\toprule
+\textbf{Region} & \textbf{Mapped object} & \textbf{Permission} & \textbf{Purpose} \\
+\midrule
+R0 & Untrusted code & RX, non-privileged & Execute communication code \\
+R1 & Untrusted data/stack/heap & RW, NX, non-privileged & Store protocol state and buffers \\
+R2 & Network buffer & RW, NX, non-privileged & Receive packet data \\
+R3 & Registered SPI/UART data path & RW, NX, non-privileged & Support allowed communication \\
+R4 & SVC entry stubs & RX, non-privileged & Enter trusted services at fixed points \\
+R5 & Read-only constants & R, NX, non-privileged & Share immutable tables \\
+R6 & Temporary shared window & RW or disabled & Enabled only for registered transfers \\
+R7 & Fault trampoline / reserved region & RX or disabled & Architecture-specific recovery path \\
+Background & Trusted code/data/MMIO & Privileged only & Hide trusted objects from untrusted code \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\added[id=rev]{Table~\ref{tab:mpu_regions} shows how the seven effective non-background partitions are arranged. R0 and R1 separate untrusted code from untrusted writable data and prevent writable code or executable data. R2 stores packet data received from the network before verification. R3 exposes only registered communication ranges required by the untrusted stack. R4 contains SVC entry stubs, which lets the untrusted domain call trusted services only through fixed entry instructions. R5 provides read-only constants when required by both domains. R6 is disabled by default and is enabled only when the loader or a trusted service needs a bounded shared transfer window. R7 is reserved for a fault trampoline or disabled on platforms that do not need it. All trusted code, trusted data, I/O images, setpoints, and protected MMIO ranges remain outside non-privileged access.}
+
+\subsubsection{Compiler phase: software entries, interrupt hardening, and secure binary generation}
+
+\added[id=rev]{The compiler phase turns the partition result into deployable code. It performs three transformations: adding software entry points, reinforcing interrupt security, and generating secure binaries with metadata. The compiler-phase portion of Figure~\ref{fig:mpu_domain_management} gives the code-level transformation view and the resulting artifacts used by deployment.}
+
+
+\added[id=rev]{For software entry points, the compiler replaces each permitted cross-domain service call with a small SVC stub. The stub loads a service identifier into a fixed register, executes an SVC instruction, and passes only the arguments defined by the service ABI. The trusted SVC handler decodes the service identifier, checks whether the caller program counter belongs to an allowed call-site interval, and then dispatches the target trusted routine. The compiler emits the SVC stubs into \texttt{.svc.entry}, so the MPU can expose only this entry area to non-privileged execution.}
+
+\added[id=rev]{For interrupt hardening, the compiler first identifies ISR entry functions from the vector table. For each ISR, it builds a call graph and marks the functions reachable from that ISR. It then instruments the ISR prologue to store the interrupted context in a trusted stack area and clear registers that may contain trusted-domain values before untrusted code resumes. It also instruments memory reads, writes, and indirect jumps inside the ISR-reachable function set if they may access trusted ranges or jump outside the labeled target set. The ISR epilogue restores the saved context and returns to the interrupted privilege state.}
+
+\added[id=rev]{For secure-binary generation, the toolchain converts the untrusted ELF into a loader-readable image. The metadata header records the number of sections, section type, load address, file offset, memory size, permission flags, initial program counter, initial stack pointer, authorized SVC-entry range, and binary hash. The loader uses this metadata to verify that every section is loaded only into the untrusted memory range and that the declared permissions match the MPU policy. The final binary is encoded as \texttt{<total length, metadata header, section payloads>}, so the deployment phase can reproduce the intended layout without relying on symbolic ELF processing on the microcontroller.}
+
+
+% ============================================================
+% B3. Contribution 3: I/O-data-driven access control method
+% ============================================================
+
+\subsection{I/O-Data-Driven Access Control}
+\label{sec:io_data_access_control}
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=\textwidth]{4.3.png}
+    \caption{I/O-data-driven access control. The left half shows how LiTEE-PLC extracts and enforces the minimum trusted output path for actuator data, including SVC mapping and cycle-counter checking. The right half shows state-estimation-driven access control for network sensor data, where residual-window detection triggers authentication and only accepted values enter the trusted input image.}
+    \label{fig:io_data_access_control}
+\end{figure*}
+
+\added[id=rev]{Figure~\ref{fig:io_data_access_control} summarizes the two I/O-data-driven mechanisms. I/O-data-driven access control handles the cross-domain operations that cannot be decided by address permissions alone. LiTEE-PLC applies two concrete mechanisms. For actuator-output data, it extracts a minimum trusted output path and executes that path through a protected SVC service. For network sensor inputs, it uses state estimation and a sliding-window detector to decide when a sensor value must be authenticated before it is copied into the trusted input image.}
+
+\subsubsection{Minimum trusted output path for actuator data}
+
+\added[id=rev]{The left half of Figure~\ref{fig:io_data_access_control} shows the principle of the minimum trusted output path. The input to this mechanism is the set of actuator-related control variables produced by the control program. The output is a protected SVC service that sends only the corresponding actuator command through the shared communication peripheral. The rest of the network stack remains in the untrusted domain.}
+
+
+\added[id=rev]{The forward slicing starts from manually annotated actuator-output roots, such as valve-opening percentage, motor enable bits, relay states, compressor speed commands, or emergency-shutdown commands. The LLVM pass follows use-def and def-use chains from these roots through assignments, pointer aliases, array stores, structure fields, function arguments, and return values. It also follows call edges from producers of actuator data to the send functions that consume this data. The slice stops when it reaches a peripheral write, a network send primitive, or a function boundary that does not affect the actuator value.}
+
+\added[id=rev]{LiTEE-PLC distinguishes memory data from non-memory data during slicing. Memory data refers to values that are stored in addressable program objects, including global variables, static variables, stack slots whose address escapes, heap objects, arrays, structures, I/O-image fields, and packet-buffer fields. Non-memory data refers to temporary SSA values, constants, immediate operands, and register-only intermediate values that do not need persistent protection after the current instruction sequence. LiTEE-PLC protects memory data because attackers can revisit or overwrite it through memory accesses. Register-only values are instead protected by the entry, context-clearing, and interrupt-hardening rules.}
+
+\added[id=rev]{The automatic extraction has four steps. The pass first collects annotated actuator-output roots and resolves their LLVM IR objects. It then computes the forward slice until it reaches send-side sinks, such as packet serialization, SPI transmit-register writes, or network-send wrappers. Next, it prunes statements that do not affect the bytes transmitted to the actuator, such as logging, debug counters, or unrelated protocol parsing. Finally, it outlines the remaining statements into a new function whose parameters are limited to the trusted actuator data and the fixed peripheral/session descriptor. This outlined function becomes the body of the protected SVC service.}
+
+\added[id=rev]{A minimum output path has the form \texttt{control variable -> output image -> serialization buffer -> chip-select/data register -> actuator}. To outline this path, the compiler copies the necessary basic blocks into a new service routine, replaces external variables with explicit parameters or trusted loads, and removes calls that are not needed for the actuator command bytes. If the original path contains a shared helper function, the compiler clones only the helper statements that contribute to the actuator packet. The outlined routine is placed in the trusted text section, and its input variables are placed in the trusted data section.}
+
+\added[id=rev]{The SVC service routine contains only the code needed to transmit the protected actuator data. It reads actuator values from the trusted output image, formats the protocol fields required by the target actuator, toggles the required chip-select line through trusted PIO operations, writes the data word or packet bytes to the transmit register or network send primitive, and updates a cycle-local execution counter. The untrusted domain cannot choose arbitrary trusted data or arbitrary chip-select states; it can only request a fixed SVC identifier at the call sites registered by the compiler.}
+
+\begin{table}[t]
+\centering
+\caption{Mapping generated for the minimum trusted output path.}
+\label{tab:output_path_map}
+\footnotesize
+\begin{tabular}{llll}
+\toprule
+\textbf{Before mapping} & \textbf{Generated map entry} & \textbf{After mapping} & \textbf{Runtime check} \\
+\midrule
+Actuator variable & variable $\rightarrow$ service ID & Trusted data load & Value read from trusted output image \\
+Send call site & caller PC $\rightarrow$ SVC ID & \texttt{svc \#id} stub & Caller PC in allowed range \\
+Peripheral register & service ID $\rightarrow$ MMIO range & Trusted register write & MMIO range fixed by service \\
+PLC scan cycle & cycle ID $\rightarrow$ counter & Monotonic counter update & Exactly once per cycle \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\added[id=rev]{Table~\ref{tab:output_path_map} shows how the map is built. Before mapping, the compiler observes variables, call sites, peripheral writes, and the scan-cycle boundary as separate program facts. It then creates map entries linking actuator variables to a service ID, call-site address ranges to the same service ID, service ID to a fixed peripheral range, and cycle number to a monotonic counter. After mapping, the untrusted path contains only SVC calls, while the trusted service loads protected data and performs fixed MMIO or send operations.}
+
+\added[id=rev]{The runtime state machine for the protected output path contains four states: \texttt{Idle}, \texttt{SVC-Entered}, \texttt{Sent}, and \texttt{Fail-Stop}. At the beginning of each PLC scan cycle, the counter is reset and the state becomes \texttt{Idle}. When the authorized SVC is triggered from a registered call site, the state becomes \texttt{SVC-Entered}. After the service sends the actuator data and updates the counter, the state becomes \texttt{Sent}. At the end of the scan cycle, the trusted runtime checks whether the expected counter value is present. If the expected value is missing or duplicated, the state changes to \texttt{Fail-Stop}. We use the term \emph{counter mismatch} consistently for this failed check.}
+
+\added[id=rev]{The high predictability of PLC control flow appears in the scan-cycle structure. In the evaluated PLC runtime, each cycle follows a fixed order: input-image update, control-program execution, output-image update, and communication/maintenance. The protected actuator transmission is expected after the output image has been computed and before the cycle finishes. LiTEE-PLC uses this cycle position as the trigger condition for the protected SVC path. Therefore, the check is not a generic heartbeat; it is a cycle-aligned verification that the actuator-output path was executed exactly once for the current control output.}
+
+\added[id=rev]{The protected data are sent from the trusted output image to the actuator through the outlined service routine. For a serial or SPI-connected actuator, the service serializes the output value into protocol bytes, drives the chip-select line, writes the bytes to the transmit data register, and releases the chip-select line. For an Ethernet-connected actuator, the service prepares only the actuator-command payload and calls the registered send primitive without exposing the trusted output value to arbitrary untrusted code. In both cases, the source is the trusted output image and the destination is the actuator-side communication endpoint, not an arbitrary network buffer selected by the attacker.}
+
+\subsubsection{State-estimation-driven control for network sensor data}
+
+\added[id=rev]{The right half of Figure~\ref{fig:io_data_access_control} shows the principle of network sensor access control. The mechanism connects the control program, physical process variables, network packets, and Kalman-filter states. The system state denotes the business-level physical process state, such as pressure, flow, temperature, valve position, or compressor state in the gas-transmission scenario. It does not refer to the PLC runtime state.}
+
+
+\added[id=rev]{The control program and the physical process are connected by the state-space model. The control program computes a control input $u(k)$, such as valve opening or compressor command, from the input image and setpoints. The physical process evolves from $x(k)$ to $x(k+1)$ under $u(k)$ and process noise $w(k)$. Sensors report measured output $y(k)$ through network packets, and the measurement includes noise $v(k)$. Thus, $x(k)$ is the process state, $u(k)$ is the control output produced by the PLC logic, and $y(k)$ is the sensor value received through Modbus or another field protocol.}
+
+\added[id=rev]{LiTEE-PLC uses the following linear or near-linear model for process variables that are stable around an operating point:}
+\begin{equation}
+\begin{aligned}
+x(k+1) &= Ax(k) + Bu(k) + w(k), \\
+y(k) &= Cx(k) + v(k).
+\end{aligned}
+\label{eq:state_model_revised}
+\end{equation}
+\added[id=rev]{In this model, $A$, $B$, and $C$ are obtained from process configuration, offline identification, or normal-operation traces. For gas transmission, $x(k)$ may include pressure and flow states, $u(k)$ may include valve and compressor commands, and $y(k)$ is the sensor value carried by network packets. Linear or near-linear modeling is therefore tied to the physical process controlled by the PLC, not to the PLC runtime or to the network protocol state.}
+
+\added[id=rev]{The access-control state machine has six states: \texttt{Normal}, \texttt{Transient-Deviation}, \texttt{Suspicious}, \texttt{Authenticating}, \texttt{Accepted}, and \texttt{Rejected}. In \texttt{Normal}, residuals stay below the threshold and the received value is copied into the trusted input image. In \texttt{Transient-Deviation}, one or a few residuals exceed the threshold but the sliding-window condition is not yet satisfied, so the system keeps monitoring without triggering authentication. In \texttt{Suspicious}, the number of abnormal residuals in the window exceeds the threshold and authentication is triggered. In \texttt{Authenticating}, the system checks the sensor identity, sequence number, freshness metadata, and HMAC. A successful check enters \texttt{Accepted}; a failed check enters \texttt{Rejected} and the value is not copied into the trusted input image.}
+
+\begin{table}[t]
+\centering
+\caption{State machine for network sensor access control.}
+\label{tab:nac_state_machine}
+\footnotesize
+\begin{tabular}{lll}
+\toprule
+\textbf{State} & \textbf{Condition} & \textbf{Action} \\
+\midrule
+Normal & $r(k)\leq \lambda$ & Copy value to trusted input image \\
+Transient-Deviation & $r(k)>\lambda$, window count $\leq \theta$ & Monitor and keep local window state \\
+Suspicious & window count $>\theta$ & Trigger authentication \\
+Authenticating & Auth metadata available & Verify device ID, sequence, and HMAC \\
+Accepted & Authentication succeeds & Copy verified value to trusted input image \\
+Rejected & Authentication fails & Reject value and keep safe input handling \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\added[id=rev]{The threshold is $\lambda=k\sigma$, where $\sigma$ is the standard deviation of residuals measured during normal operation and $k$ is the threshold multiplier. The sliding window is a sequence of recent residual decisions for one sensor variable, not a window over arbitrary program variables. For each network sensor $s$, LiTEE-PLC maintains a window $W_s=\{b_{k-W+1},\ldots,b_k\}$, where $b_i=1$ if $r_s(i)>\lambda_s$ and $b_i=0$ otherwise. The anomaly-count threshold $\theta$ is the minimum number of abnormal samples required to enter the \texttt{Suspicious} state. The parameters $k$, $W$, and $\theta$ are selected from normal-operation traces and validated in the evaluation by FAR/FNR and scan-cycle overhead.}
+
+\added[id=rev]{The logical relation among threshold, attack, and authentication is as follows. A single packet is suspicious only if its residual exceeds $\lambda$. A sequence becomes an attack candidate only if enough suspicious packets appear inside the sliding window. Authentication is triggered only for such attack candidates. In packet terms, the input to authentication is not a user identity; it is a device/session identity for the sensor that produced the network value. The authenticated metadata includes sensor ID, key ID or session ID, sequence number, freshness counter or timestamp, measured value, and HMAC-256 over these fields. The result determines whether the value is copied into the trusted input image.}
+
+\added[id=rev]{Short-term deviations can be self-corrected because many PLC-controlled processes contain feedback and inertia. For example, if one pressure sample briefly deviates because of noise, the next scan cycle reads a new value, the controller recomputes the actuator command, and the process may return toward the setpoint without changing authentication state. The sliding window filters this transient noise by requiring persistent residual violations before authentication. It reduces unnecessary authentication because isolated noise spikes do not cause expensive HMAC verification, while repeated or sustained forged values still cross the window threshold and are checked.}
+
+\added[id=rev]{A sensitive setting in this mechanism consists of the residual threshold multiplier $k$, the residual standard deviation $\sigma$ for each sensor variable, the window size $W$, the anomaly-count threshold $\theta$, the sensor identity/key mapping, and the fallback action after rejection. A smaller $k$ or smaller $\theta$ makes detection more sensitive but may increase false alarms. A larger $k$ or larger $\theta$ reduces false alarms but can delay detection because more abnormal samples are required before the state changes from \texttt{Transient-Deviation} to \texttt{Suspicious}. The delay is bounded by the window policy: in the worst case, authentication is triggered only after enough abnormal samples have accumulated within $W$ scan cycles.}
+
+
+
+
+
+\section{Evaluation}
+\label{chap7}
+
+
+
+\added[id=rev]{This section evaluates LiTEE-PLC from five aspects. Section~\ref{sec:eval_setup} presents the experimental setup and integrates the implementation details of the prototype. Section~\ref{sec:attack_scenarios} describes the attack scenarios and experimental design without analyzing results. Section~\ref{sec:security_eval} reports the security results, including whether attacks succeed before protection, whether they are blocked after enabling LiTEE-PLC, and whether normal control behavior is preserved. Section~\ref{sec:runtime_overhead} evaluates system runtime overhead, scan-cycle overhead, and runtime comparison with representative prior mechanisms. Section~\ref{sec:memory_overhead} reports memory overhead. Discussion-oriented analysis that is not directly supported by experiment tables is moved to Section~\ref{chap8}.}
+
+\subsection{Experimental Setup}
+\label{sec:eval_setup}
+
+\subsubsection{Prototype platform and runtime}
+
+\added[id=rev]{We implement LiTEE-PLC on an Arduino Due board equipped with an ATSAM3X8E processor based on the ARM Cortex-M3 architecture, running at 84\,MHz with 512\,KB Flash and 96\,KB SRAM. We omit the definition of a bare-metal system here because it has already been introduced in the Introduction and Background sections.}
+
+\added[id=rev]{We use OpenPLC~\chcite{autonomylogic2025-openplc-address} as the PLC runtime. Commercial runtimes such as CODESYS~\chcite{codesys2025} and Siemens PLC runtimes provide mature IEC~61131-3 execution environments, but their runtime core, protocol stack, and hardware abstraction layers are not fully accessible for low-level instrumentation, linker-script rewriting, MPU-region placement, and MMIO-level experiments. OpenPLC is representative for our purpose because it implements the same scan-cycle abstraction and IEC~61131-3-style control-program execution model while exposing all components that LiTEE-PLC must modify or measure: the runtime scheduler, I/O image mapping, Modbus communication path, protocol-stack boundary, generated control-program code, and hardware abstraction layer. This full controllability lets us precisely place trusted and untrusted objects, instrument entry points, replay peripheral operations, and measure scan-cycle overhead without treating the runtime as a black box.}
+
+\added[id=rev]{The prototype integrates an Ethernet Shield~2~\chcite{arduino_ethernet_shield_2} through the SPI bus. We use this device because it represents a common microcontroller-class Ethernet deployment pattern: the Ethernet controller is attached as an external network peripheral, the MCU accesses it through MMIO/SPI operations, and the TCP/IP/Modbus stack must share the same peripheral path with control traffic. This structure is suitable for evaluating LiTEE-PLC because it creates exactly the shared-peripheral case studied in this paper: ordinary protocol processing should remain in the untrusted domain, while actuator-related traffic and minimum trusted I/O operations require controlled access.}
+
+\subsubsection{Implementation details merged from the original implementation section}
+
+\added[id=rev]{The LiTEE-PLC toolchain is built on the GCC~9.2 cross-compiler and contains a 102-line Makefile plus 581 lines of Python code for generating the untrusted binary and metadata. The runtime protection code contains 942 lines of C code and 360 assembly instructions. Lines of code (LOC) denotes non-comment, non-blank source lines. The 942 LOC consist of two parts: an 810-LOC secure-update service for firmware signature verification, decryption, and flashing, and a 132-LOC runtime isolation and monitoring core for MPU management, context switching, peripheral access control, and exception handling. The secure-update service is used only during firmware update and is not active in normal scan cycles, while the 132-LOC runtime core remains active during control execution.}
+
+\added[id=rev]{For memory layout, GCC attributes and the linker script define the following sections: \texttt{.trusted.text} for trusted control code and runtime services, \texttt{.trusted.data} for input images, output images, setpoints, and other safety-critical data, \texttt{.untrusted.text} for externally exposed communication and protocol-processing code, \texttt{.untrusted.data} for the non-secure stack, heap, and network buffers, and \texttt{.svc.entry} for controlled cross-domain entry stubs. The linker script aligns these sections to MPU-region boundaries and emits section symbols such as \texttt{\_\_trusted\_text\_start}, \texttt{\_\_trusted\_text\_end}, \texttt{\_\_untrusted\_data\_start}, and \texttt{\_\_svc\_entry\_start}; the loader uses these symbols to configure the MPU and to verify that each entry address belongs to the authorized entry range.}
+
+\added[id=rev]{For MPU configuration, the prototype maps untrusted code as read/execute but not writable, untrusted data as read/write but not executable, and the network-buffer region as read/write for communication logic. Trusted code, trusted data, I/O images, setpoints, SysTick, watchdog, and safety-critical MMIO regions are either placed in the privileged background region or mapped as privileged-only MPU regions. SPI and UART are configured as non-secure-accessible only where required for network communication, while chip-select operations and actuator-related data transfers are mediated by the minimum trusted I/O path. Any non-privileged access outside the allowed ranges triggers a MemManage fault or bus fault and is handled by the trusted exception path.}
+
+\added[id=rev]{For peripheral replay, the untrusted network stack cannot directly toggle trusted chip-select operations for actuator-related transfers. Instead, when the untrusted code reaches a protected SPI operation, the SVC handler checks the call site and replays the minimal sequence on behalf of the trusted path. For example, \texttt{setSS} clears the PIO Clear Output Data Register (CODR) to drive the SPI chip-select line low, and \texttt{resetSS} sets the PIO Set Output Data Register (SODR) to release it. The MemManage fault handler similarly reconstructs the protected data word by merging the trusted data value with the chip-select/control bits and writes it to the SPI Transmit Data Register twice, matching the device protocol while preventing the untrusted domain from choosing arbitrary trusted data or chip-select states.}
+
+\added[id=rev]{For network access control, the prototype maintains a Kalman filter for each networked sensor variable. During normal scan cycles, the PLC reads only the process-value registers required by the control program. When residuals persist in the sliding window, the PLC triggers an extended read that retrieves authentication material, including the HMAC-256 value, sequence number, and sensor identity fields. The verified value is copied into the trusted input-image slot only after the residual check and the optional authentication check succeed; otherwise the value is rejected or the controller enters a fail-safe handling path.}
+
+\subsubsection{Testing platform and security-evaluation scenario}
+
+\added[id=rev]{We use two complementary types of workloads in the evaluation. The first is a concrete gas-transmission pressure-regulation scenario, which is used for the attack-scenario and security-evaluation experiments. The second is a set of PLC benchmark workloads collected from public industrial-control projects, which is used for runtime-overhead and scalability evaluation. This separation avoids mixing a concrete business scenario with benchmark workloads: the gas-transmission scenario evaluates whether LiTEE-PLC preserves control safety under attacks, while the benchmark workloads evaluate whether LiTEE-PLC remains lightweight under different scan-cycle and slave-device scales.}
+
+\added[id=rev]{The gas-transmission testing platform contains one LiTEE-PLC prototype, four networked sensor nodes, two actuator nodes, one engineering station, one HMI station, one attacker host, and one Ethernet router. All devices are connected to the same site network. Modbus TCP is used for process data exchange, ScadaBR~\chcite{scadabr} is used for HMI visualization and setpoint writes, and the engineering station is used for control-program download and firmware-update experiments. The attacker host is used only in attack-scenario experiments to inject malicious Modbus writes, replay forged sensor values, or deliver malicious control-program updates.}
+
+\added[id=rev]{The concrete business process is gas-transmission pressure regulation. The PLC control program maintains downstream pipeline pressure and flow within safe ranges by reading upstream pressure, downstream pressure, gas flow rate, gas temperature, valve-position feedback, and compressor status. It then computes actuator commands for valve opening and compressor enable/speed control. The HMI displays pressure, flow, alarm state, and actuator state, and allows an operator to write pressure and flow setpoints. The engineering station deploys the ladder/structured-text control program and signed firmware-update package. This scenario is representative for security evaluation because it includes network sensor inputs, operator setpoints, actuator outputs, remote engineering operations, and shared Ethernet/SPI peripheral activity in a single control loop.}
+
+\added[id=rev]{The transmitted data in the gas-transmission scenario are organized as follows. Sensor nodes send Modbus input-register values, including upstream pressure, downstream pressure, flow rate, temperature, valve-position feedback, compressor status, and sensor status. HMI writes use Modbus holding registers for pressure setpoint, flow setpoint, alarm-reset command, and manual/automatic mode switching. PLC-to-actuator messages contain valve-opening percentage, compressor enable bit, compressor speed setpoint, and emergency-shutdown command. During authenticated reads, sensor nodes additionally provide sensor identity, sequence number, timestamp or freshness counter, and HMAC-256 authentication data.}
+
+\subsubsection{Runtime benchmark workloads}
+
+\added[id=rev]{For runtime-overhead and scalability evaluation, we use benchmark PLC workloads rather than the single gas-transmission scenario alone. These workloads are collected from public industrial-control project examples~\chcite{mrplc} and ported to the LiTEE-PLC prototype. The final benchmark set should be reported explicitly rather than left for the reader to infer from the external repository. In our experiments, the benchmark set contains \textbf{TBD projects in total}, including \textbf{TBD} manufacturing projects, \textbf{TBD} energy projects, \textbf{TBD} chemical-processing projects, and \textbf{TBD} water-treatment or fluid-control projects. These projects are representative for performance evaluation because they exercise common PLC operations relevant to LiTEE-PLC: cyclic input-image update, setpoint-dependent control logic, actuator-output generation, Modbus communication, and peripheral I/O.}
+
+\added[id=rev]{To evaluate scalability, we further configure four slave-device settings for these benchmark workloads. A slave is a networked field device, such as a sensor node or actuator node, that exchanges process data with the PLC. The 2-, 4-, 8-, and 16-slave settings represent increasingly complex control loops and correspond to maximum allowable scan-cycle times of 15\,ms, 25\,ms, 50\,ms, and 110\,ms, respectively. These settings are used only for runtime-overhead and scalability measurement, while the gas-transmission scenario is used for attack-scenario and security-evaluation experiments.}
+
+\subsubsection{Compared systems and measurement method}
+
+\added[id=rev]{We compare Baseline, LiTEE-PLC, M2MON, PISTIS, and a PLC-oriented TrustZone-based network-access-control design. This related-work configuration is part of the experimental setup rather than the result analysis. For fairness, all compared systems execute the same firmware, runtime, control programs, network inputs, and slave-device settings. For M2MON, all MMIO operations that can be statically identified are instrumented, and dynamically reached MMIO points are manually inspected and instrumented. For PISTIS, non-secure instructions are instrumented following its software-isolation strategy. For the PLC-oriented TrustZone-based design, the original per-network-input authentication policy is preserved; because Arduino Due does not provide TrustZone, only the memory/peripheral-isolation substrate is replaced by the LiTEE-PLC MPU-based substrate to allow comparison of the network-access-control policy under the same hardware platform.}
+
+\subsection{Attack Scenarios}
+\label{sec:attack_scenarios}
+
+
+
+\added[id=rev]{This subsection describes the experimental design of six attack scenarios listed in Table~\ref{tab:attack_scenarios_revised}. The result analysis is reported in Section~\ref{sec:security_eval}. The scenarios are derived from known PLC/ICS incidents and attack studies, including Stuxnet-style control-logic manipulation~\chcite{baezner2017stuxnet}, Triton-style safety/control interference~\chcite{mckinnon2014triton}, PLC memory and firmware attacks~\chcite{sun2021plc-sok2,wang2023plc-sok4,lopez2024plc-sok1,mishra2022plc-sok3,zografopoulos2021plc-sok5}, and false-data-injection attacks against feedback control~\chcite{gonen2020falsedata-inject1}. The table gives the experimental target and expected process impact for all six attacks, while the following paragraphs explain the concrete attack code paths and the corresponding LiTEE-PLC protection mechanisms.}
+
+% ------------------------------------------------------------------
+% Table 5 + revised security-evaluation text
+% ------------------------------------------------------------------
+\begin{table*}[t]
+\centering
+\caption{Security evaluation results for the six attack scenarios in the gas-transmission experiment. ``Loss before protection'' reports the observed process-level impact under the unprotected baseline, while ``After LiTEE-PLC'' reports both the defense outcome and whether normal control behavior is preserved.}
+\label{tab:attack_scenarios_revised}
+\footnotesize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{p{2.2cm}p{3.0cm}p{3.2cm}p{3.8cm}p{4.4cm}}
+\toprule
+\textbf{Attack scenario} & \textbf{Attack code / injected action} & \textbf{Targeted PLC object} & \textbf{Loss before protection} & \textbf{After LiTEE-PLC} \\
+\midrule
+Physical pin hijacking
+& Write \texttt{PIOB\_SODR} at \texttt{0x400E1030}.
+& GPIO output pin for the valve.
+& Pressure drops from 1200 to 200\,kPa, flow drops from 800 to 100\,L/min, and the valve changes from 50\% to 100\%.
+& Blocked. \texttt{g\_rejectCount}=1 and an MPU fault is triggered. The process remains at pressure 1200\,kPa, flow 800\,L/min, and valve 50\%.
+\\
+False data injection
+& Write \texttt{int\_input[0..1]}; Kalman filter and sliding-window check with threshold 9.647 and window 5.
+& Pressure/flow sensor input buffer.
+& Pressure changes from 1200 to 50\,kPa and flow changes from 800 to 10\,L/min. The PLC reads corrupted data.
+& Detected by the Kalman filter. \texttt{g\_rejectCount}=2; residuals exceed 9.647 for five consecutive samples, the window triggers, anomalous values are rejected, and pressure/flow stay at 1200\,kPa and 800\,L/min.
+\\
+Watchdog disable
+& Write \texttt{WDT\_MR} at \texttt{0x400E1454}.
+& Watchdog timer control register.
+& The watchdog is disabled and the system loses reset-on-hang protection.
+& Blocked. \texttt{g\_rejectCount}=3 and an MPU fault is triggered. The watchdog remains active.
+\\
+Setpoint tampering
+& Write \texttt{int\_output[0]}.
+& Pressure setpoint register.
+& The pressure setpoint changes from 1000 to 0\,kPa, causing the PLC to target zero pressure.
+& Rejected. \texttt{g\_rejectCount}=4 and HMAC verification fails. The pressure setpoint remains 1000\,kPa.
+\\
+I/O-buffer tampering
+& Write \texttt{bool\_output[0][0..1]}.
+& Output-image memory for motor/valve control.
+& The motor command changes from 1500 to 3000\,RPM and the valve changes from 50\% to 0\%.
+& Blocked. \texttt{g\_rejectCount}=5 and an MPU fault is triggered. The motor remains at 1500\,RPM and the valve remains at 50\%.
+\\
+Control-program injection
+& Write Flash address \texttt{0x90000}.
+& Program-code region in Flash.
+& The program code is corrupted and the program hash becomes invalid.
+& Blocked. \texttt{g\_rejectCount}=6; Flash Region~2 is read-only, HMAC verification remains valid, and the original program is preserved.
+\\
+\bottomrule
+\end{tabular}}
+\end{table*}
+
+\subsection{Security Evaluation}
+\label{sec:security_eval}
+
+\added[id=rev]{This subsection analyzes the security results summarized in Table~\ref{tab:attack_scenarios_revised}. For each attack, we evaluate two questions: whether the unprotected baseline allows the attacker to corrupt control-relevant code, data, registers, or update paths, and whether LiTEE-PLC blocks the attack while preserving normal gas-transmission control behavior.}
+
+\added[id=rev]{The unprotected baseline exposes multiple control-critical objects to compromised communication code or unauthorized engineering operations. Physical-pin hijacking forces the valve output and drives pressure from 1200 to 200\,kPa and flow from 800 to 100\,L/min. False-data injection corrupts the pressure/flow input path and makes the PLC read 50\,kPa and 10\,L/min. Watchdog-disable attacks remove reset-on-hang protection. Setpoint tampering changes the pressure setpoint from 1000 to 0\,kPa. I/O-buffer tampering issues unsafe motor and valve outputs, and control-program injection corrupts the Flash program region. These attacks affect different parts of the PLC execution path, but they all attempt to change the physical process by corrupting control inputs, outputs, parameters, or program code.}
+
+\added[id=rev]{After enabling LiTEE-PLC, all six attacks are blocked before they can affect the trusted control path. Unauthorized MMIO and memory writes trigger MPU faults, forged sensor values are rejected by the Kalman-filter residual and sliding-window detector, unauthorized setpoint writes fail HMAC verification, and the modified control program is not installed into the trusted Flash region. Across the six attacks, \texttt{g\_rejectCount} increases from 1 to 6, matching the six blocked or rejected attempts. The protected system therefore preserves the legitimate sensing-control-actuation workflow: pressure and flow remain at 1200\,kPa and 800\,L/min under the relevant attacks, the valve remains at 50\%, the motor remains at 1500\,RPM, the watchdog remains active, and the original control program is preserved.}
+
+% ------------------------------------------------------------------
+% Table 6 + revised network-access-control parameter-selection text
+% ------------------------------------------------------------------
+\subsubsection{Network access control and parameter selection}
+\label{sec:nac_parameter_selection}
+
+\added[id=rev]{The background explanation of residual thresholding, the $3\sigma$ rule, and sliding-window robustness is moved to Section~\ref{sec:eval_setup}. This subsection focuses on the parameter-sweep results. Each configuration is evaluated with 100 normal cycles for FAR and 50 attack cycles for FNR. Runtime is measured with a microsecond-resolution timer, so the reported 13\,$\mu$s value should be interpreted as the measured upper-bound value at this timer resolution.}
+
+\begin{table}[t]
+\centering
+\caption{Security and runtime trade-off for network access control. Each parameter setting is evaluated with 100 normal cycles for FAR and 50 attack cycles for FNR. Runtime is measured with \texttt{micros()} and stays at 13\,$\mu$s for all tested settings.}
+\label{tab:nac_parameter_tradeoff}
+\footnotesize
+\begin{tabular}{cccc}
+\toprule
+\textbf{Parameter} & \textbf{Value} & \textbf{FAR / FNR} & \textbf{NAC runtime} \\
+\midrule
+$k$ & 1 & 54.0\% / 0\% & 13\,$\mu$s \\
+$k$ & 2 & 31.0\% / 0\% & 13\,$\mu$s \\
+$k$ & 3 & 9.0\% / 0\% & 13\,$\mu$s \\
+$k$ & 4 & 0\% / 0\% & 13\,$\mu$s \\
+$k$ & 5 & 0\% / 0\% & 13\,$\mu$s \\
+\midrule
+$w$ & 1 & 14.0\% / 0\% & 13\,$\mu$s \\
+$w$ & 3 & 11.0\% / 0\% & 13\,$\mu$s \\
+$w$ & 5 & 9.0\% / 0\% & 13\,$\mu$s \\
+$w$ & 10 & 4.0\% / 0\% & 13\,$\mu$s \\
+$w$ & 20 & 0\% / 0\% & 13\,$\mu$s \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\added[id=rev]{Table~\ref{tab:nac_parameter_tradeoff} shows that all evaluated parameter settings detect the injected false-data attacks in this experiment, yielding 0\% FNR. The main difference is the false-alarm behavior under normal cycles. Increasing the residual multiplier $k$ reduces FAR from 54.0\% at $k=1$ to 0\% at $k=4$ and $k=5$. Increasing the window size also lowers FAR, from 14.0\% at $w=1$ to 0\% at $w=20$, but a larger window can delay authentication because more consecutive abnormal samples are required before the state changes.}
+
+\added[id=rev]{We therefore select $k=4$ and $w=5$ as the default network-access-control setting. This setting achieves 0\% FAR and 0\% FNR in the parameter sweep while keeping the measured NAC runtime unchanged at 13\,$\mu$s. The conventional $3\sigma$ setting, $k=3$ and $w=5$, also keeps FNR at 0\%, but it produces a 9.0\% FAR in the normal-cycle measurement and would trigger unnecessary authentication more often.}
+
+
+
+\subsection{Runtime Overhead}
+\label{sec:runtime_overhead}
+
+\added[id=rev]{This subsection separates three runtime questions that were mixed in the original text. First, we report the one-time system startup overhead of LiTEE-PLC. Second, we evaluate the scan-cycle runtime overhead introduced during normal operation. Third, we compare LiTEE-PLC with prior mechanisms under the same workload and slave-device settings. The related-work configuration has already been described in Section~\ref{sec:eval_setup}; this subsection discusses only measured data.}
+
+\added[id=rev]{LiTEE-PLC has two startup costs: MPU-policy configuration costs $40\,\mu\text{s}$ on average, and non-secure program deployment costs $187\,\text{ms}$ on average. Because both costs occur only once at startup, they are reported as system runtime overhead but excluded from the scan-cycle overhead measured during normal operation.}
+
+\begin{table*}[t]
+\centering
+\caption{Scan-cycle runtime under different slave-device settings. A slave is a networked field device, such as a sensor or actuator node, that exchanges process data with the PLC. The 2-, 4-, 8-, and 16-slave settings correspond to increasingly complex control loops and therefore use different scan-cycle time limits. Component-overhead rows expose LiTEE-PLC's two runtime modules: peripheral access control and network access control.}
+\label{tab:exec_overhead_revised}
+\footnotesize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Metric} & \textbf{2 slaves} & \textbf{4 slaves} & \textbf{8 slaves} & \textbf{16 slaves} & \textbf{Average} & \textbf{Note} \\
+\midrule
+Scenario & Manufacturing & Energy & Chemical/process & Water/gas-fluid & -- & Workload class \\
+Time limit & 15\,ms & 25\,ms & 50\,ms & 110\,ms & -- & Max allowed scan time \\
+Baseline cycle time (min/avg/max) & 2.94 / 3.21 / 4.70 & 4.85 / 5.54 / 7.90 & 9.67 / 11.42 / 16.83 & 20.26 / 23.20 / 28.71 & -- & ms \\
+\midrule
+M2MON cycle time (min/avg/max) & 3.51 / 3.86 / 5.52 & 5.98 / 6.69 / 9.71 & 10.12 / 13.84 / 18.90 & 22.87 / 27.90 / 33.74 & -- & ms \\
+M2MON overhead vs. baseline avg. & +20.1\% & +20.8\% & +21.2\% & +20.3\% & +20.6\% & Runtime overhead \\
+M2MON peripheral-access overhead & 0.68\,ms & 0.98\,ms & 2.05\,ms & 4.03\,ms & -- & Main module overhead \\
+\midrule
+PISTIS cycle time (min/avg/max) & 5.08 / 5.85 / 6.96 & 9.24 / 10.07 / 13.23 & 19.73 / 21.23 / 25.98 & 38.11 / 42.27 / 48.10 & -- & ms \\
+PISTIS overhead vs. baseline avg. & +82.4\% & +81.7\% & +85.9\% & +83.1\% & +83.3\% & Runtime overhead \\
+PISTIS memory-isolation overhead & 2.92\,ms & 4.51\,ms & 9.78\,ms & 19.42\,ms & -- & Main module overhead \\
+\midrule
+TrustZone-based NAC cycle time (min/avg/max) & 5.28 / 5.95 / 7.20 & 10.37 / 10.24 / 13.80 & 20.31 / 21.20 / 26.40 & 36.82 / 43.19 / 44.73 & -- & ms \\
+TrustZone-based NAC overhead & +85.3\% & +84.8\% & +85.6\% & +86.1\% & +85.5\% & Runtime overhead \\
+TrustZone-based network-access overhead & 2.47\,ms & 4.21\,ms & 8.07\,ms & 15.84\,ms & -- & Main module overhead \\
+\midrule
+LiTEE-PLC cycle time (min/avg/max) & 2.96 / 3.24 / 4.83 & 4.87 / 5.60 / 8.37 & 9.70 / 11.50 / 17.62 & 20.30 / 23.48 / 29.98 & -- & ms \\
+LiTEE-PLC overhead vs. baseline avg. & +0.9\% & +1.1\% & +0.7\% & +1.2\% & +0.98\% & Runtime overhead \\
+LiTEE memory-isolation overhead & 12.64\,$\mu$s & 23.93\,$\mu$s & 50.27\,$\mu$s & 97.80\,$\mu$s & -- & Module overhead \\
+LiTEE peripheral-access overhead & 13.27\,$\mu$s & 24.91\,$\mu$s & 48.89\,$\mu$s & 102.53\,$\mu$s & -- & Module overhead \\
+LiTEE network-access overhead & 19.71\,$\mu$s & 37.14\,$\mu$s & 79.42\,$\mu$s & 153.30\,$\mu$s & -- & Module overhead \\
+\bottomrule
+\end{tabular}}
+\end{table*}
+
+\added[id=rev]{As shown in the ``Time limit'' row of Table~\ref{tab:exec_overhead_revised}, all slave settings have explicit timing budgets. The ``LiTEE-PLC cycle time'' row shows that LiTEE-PLC stays within all budgets and adds only 0.98\% overhead on average. The component-overhead rows further show that both peripheral access control and network access control are measured directly, avoiding a split explanation across different subsections.}
+
+\subsection{Memory Overhead}
+\label{sec:memory_overhead}
+
+\added[id=rev]{LiTEE-PLC introduces 11,640 bytes of additional storage usage, including 2,276 bytes of SRAM and 9,364 bytes of Flash. This corresponds to 2.31\% of the 96\,KB SRAM and 1.82\% of the 512\,KB Flash available on Arduino Due. Table~\ref{tab:storage_overhead_revised} reports the breakdown and includes related systems when their storage data are available. TBD indicates that the corresponding paper or implementation artifact does not provide a directly comparable value yet.}
+
+\begin{table}[t]
+\centering
+\caption{Memory overhead comparison. ``TBD'' means that the corresponding related work does not report a directly comparable value in the available artifact yet.}
+\label{tab:storage_overhead_revised}
+\footnotesize
+\begin{tabular}{lcc}
+\toprule
+\textbf{System / component} & \textbf{SRAM overhead} & \textbf{Flash overhead} \\
+\midrule
+M2MON & TBD & TBD \\
+PISTIS & TBD & TBD \\
+PLC-oriented TrustZone-based NAC & TBD & TBD \\
+\midrule
+LiTEE-PLC memory isolation & \multicolumn{2}{c}{1,042 bytes} \\
+LiTEE-PLC peripheral access control & \multicolumn{2}{c}{114 bytes} \\
+LiTEE-PLC network access control & \multicolumn{2}{c}{1,132 bytes} \\
+LiTEE-PLC security services & \multicolumn{2}{c}{3,256 bytes} \\
+MPU alignment fragmentation & 144 bytes & $\sim$3.8 KB \\
+\midrule
+LiTEE-PLC total & 2,276 bytes & 9,364 bytes \\
+Device capacity share & 2.31\% & 1.82\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\added[id=rev]{The code-size and module-function discussion previously placed under TCB analysis is moved here and into Section~\ref{sec:eval_setup}. Instead of using a separate subsection with only one paragraph, we report the code-size facts as part of the implementation and memory-overhead setup. The runtime core is 132 lines of code (LOC), while the secure-update service is 810 LOC and is inactive during normal scan cycles.}
+
+
+\section{Discussion \& Future Work}
+\label{chap8}
+Despite LiTEE-PLC’s  advantages in security and real-time performance, there remains scope for further improvements:
+
+\textbf{Driver Code Minimization.} Minimizing driver code in the secure world reduces defects and simplifies  verification and manual auditing. We recommend methods from\cite{guo2022minimum} and\cite{wang2022rt-tee}, which record and replay driver-device interactions to generate a minimal functional ``driverlet''. Although orthogonal to our approach, these methods and our proposed mechanism can complement each other to enhance TEE security and trustworthiness.
+
+\textbf{MPU Constraints.}  Since the Cortex-M3 processor offers only eight MPU regions (Regions 0–7), the number of enabled non-secure peripherals is limited to six regions at most (with Regions 0–1 used for code/data protection). In extreme scenarios, this may not suffice. Additionally, System memory regions (as detailed in Section 2.2) encompass critical core peripherals\cite{zhou2022opec}such as the Nested Vectored Interrupt Controller (NVIC) and SysTick timer. Should the non-secure world require access to these components, Bus exceptions similar to MemManage exceptions would be triggered (though our experimental targets do not involve such access patterns).  For both aforementioned peripheral types, we recommend adopting the same peripheral access control mechanism described in Section 4.4.1, where operations are uniformly proxied through exception handlers in the secure world.  Experiments confirm that $\mu\mathrm{s}$-level overhead remains predictably low. Notably, the region quantity limitation would be significantly mitigated in processors supporting more MPU regions, such as Cortex-M7\cite{mpu-7}, PowerPC e200\cite{powerpc}, and certain RISC-V implementations\cite{risc-v}.
+
+
+
+\section{Conclusion}
+\label{chap9}
+This paper introduces LiTEE-PLC, a lightweight trusted execution environment specifically designed for LE-PLC. By employing fine-grained decoupling of LE-PLC software modules and leveraging MPUs, LiTEE-PLC effectively isolates core modules from potential security threats without requiring any hardware modifications. Through lightweight peripheral access control based on the Minimum Trusted I/O Path and lightweight network access control based on state estimation, LiTEE-PLC further ensures complete, low-overhead, and highly secure cross-world resource interactions. Our evaluation shows that LiTEE-PLC maintains real-time performance with negligible runtime and memory overhead, making it an ideal solution for resource-constrained industrial environments.
+
+
+
+% If your work needs an appendix, add it before the
+% ``\verb|\end{document}|'' command at the conclusion of your source
+% document.
+
+% Start the appendix with the ``\verb|appendix|'' command:
+% \begin{verbatim}
+%   \appendix
+% \end{verbatim}
+% and note that in the appendix, sections are lettered, not
+% numbered. This document has two appendices, demonstrating the section
+% and subsection identification method.
+
+
+
+%%
+%% The acknowledgments section is defined using the "acks" environment
+%% (and NOT an unnumbered section). This ensures the proper
+%% identification of the section in the article metadata, and the
+%% consistent spelling of the heading.
+% \begin{acks}
+% This work was supported byBeijing Natural Science Foundation (Grant No.L234033), National Natural Science Foundation of China (Grant No.92467201), the Key Research Project of Chinese Academy of Sciences (No. RCJJ-145-24-17).
+% \end{acks}
+
+%%
+%% The next two lines define the bibliography style to be used, and
+%% the bibliography file.
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{sample-base}
+
+
+%%
+%% If your work has an appendix, this is the place to put it.
+\appendix
+
+\section{Appendices}
+\label{appendix:parameters}
+
+\subsection{Open Science}
+
+
+\subsection{Ethical Considerations}
+
+\subsection{A1}
+In the calculation of the anomaly detection threshold ($\lambda = k*\sigma$), the method based on the standard deviation (std) utilizes the complete dataset and performs exceptionally well when the data follows a normal distribution.
+Regarding the selection of the threshold multiplier $k$, a larger $k$ value helps reduce the false positive rate but may increase the risk of FNR. Conversely, a smaller $k$ enhances sensitivity to anomalies but can lead to a higher false positive rate. According to the $3*\sigma$ rule, when $k$ is set to 3, approximately 99.73\% of the data falls within the range of the mean $±$ 3 standard deviations, theoretically resulting in high sensitivity to anomalies while maintaining a low false positive rate (around 0.27\%). This rule is widely used in industrial quality control due to its well-established balance between detection sensitivity and system reliability.
+
+Historical experimental results show that when $k = 2$, the false positive rate tends to be high, whereas $k = 4$ may significantly increase the likelihood of FNR. Considering both detection performance and system stability, $k = 3$ offers the best trade-off between FAR and FNR. Practical evaluations further support the rationality of this choice, as demonstrated in Table \ref{tab:sigma-performance}.
+
+\begin{table}[htbp]
+\centering
+\caption{Detection performance under different sigma thresholds}
+\begin{tabular}{cccc}
+\toprule
+\textbf{$\sigma$ Size} & \textbf{Detection Rate} & \textbf{FAR} & \textbf{FNR} \\
+\midrule
+1 & 1.0000 & 0.2512 & 0.0000 \\
+2 & 1.0000 & 0.1302 & 0.0000 \\
+3 & 1.0000 & 0.0654 & 0.0000 \\
+4 & 0.9975 & 0.0289 & 0.0025 \\
+\bottomrule
+\end{tabular}
+\label{tab:sigma-performance}
+\end{table}
+
+Control systems typically exhibit a certain degree of robustness, allowing them to automatically adjust and return to a stable state when subjected to short-term or transient deviations. However, if such deviations persist beyond a predefined duration threshold, the system’s inherent recovery mechanisms may fail, making it difficult to reestablish stable operation. Therefore, selecting an appropriate sliding window size becomes crucial—not only to maintain system stability but also to reduce the overhead of unnecessary identity authentications triggered by FAR.
+
+To this end, we evaluate the impact of different window sizes on the reduction of FAR, while fixing the detection threshold at $3\sigma$ to avoid false negatives rate (FNR). Experimental results show that as the window size increases, the false positive rate significantly decreases, while the detection rate remains consistently at 100\%. Specifically, as the window size increases from 1 to 20, the false positive rate drops from 0.0654\% to a minimum of 0.0006\%, with the false negative rate consistently remaining at 0. This indicates that enlarging the window size effectively reduces the occurrence of FAR without compromising detection performance.
+
+In the initial stage (window sizes from 1 to 5), increasing the window size imposes stricter criteria for identifying attacks—requiring multiple consecutive data points to exceed the threshold. Since random fluctuations in normal data rarely persist across multiple cycles, the false positive rate drops sharply. In the later stage (window sizes from 6 to 20), while the number of FAR remains relatively stable, the denominator in the false positive rate formula, $2000×(240/w)$, decreases due to the reduced value of $240/w$ as $w$ increases. Mathematically, as the window size increases, the numerator (number of FAR) tends to stabilize, but the shrinking denominator causes a slow rise in the false positive rate.
+
+From a physical perspective, larger windows reduce the likelihood of misjudgment but also decrease the opportunities for identity authentication checks. This trade-off results in a non-monotonic variation in the FAR as the window size increases.
+
+\begin{table}[htbp]
+\centering
+\caption{Effect of Sliding Window Size on Detection and False Alarm Rates}
+\begin{tabular}{ccc}
+\toprule
+\textbf{Window Size} & \textbf{Detection Rate} & \textbf{False Alarm Rate} \\
+\midrule
+1  & 1.0000 & 0.0654 \\
+2  & 1.0000 & 0.0121 \\
+3  & 1.0000 & 0.0029 \\
+4  & 1.0000 & 0.0009 \\
+5  & 1.0000 & 0.0006 \\
+10 & 1.0000 & 0.0010 \\
+15 & 1.0000 & 0.0014 \\
+20 & 1.0000 & 0.0018 \\
+\bottomrule
+\end{tabular}
+\label{tab:window-size}
+\end{table}
+
+\end{document}
+\endinput
+%%
+%% End of file `sample-sigconf.tex'.
